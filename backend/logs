@@ -246,3 +246,864 @@
 2024-06-06T00:32:13.171+02:00  INFO 16888 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-06T00:32:13.172+02:00  INFO 16888 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-06-06T00:32:13.174+02:00  INFO 16888 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T11:02:08.950+02:00  INFO 10144 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 10144 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T11:02:08.952+02:00  INFO 10144 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T11:02:09.850+02:00  INFO 10144 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T11:02:09.997+02:00  INFO 10144 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 2 JPA repository interfaces.
+2024-06-06T11:02:10.502+02:00  INFO 10144 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T11:02:10.524+02:00  INFO 10144 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T11:02:10.524+02:00  INFO 10144 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T11:02:10.579+02:00  INFO 10144 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T11:02:10.580+02:00  INFO 10144 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1410 ms
+2024-06-06T11:02:10.598+02:00 DEBUG 10144 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T11:02:10.598+02:00 DEBUG 10144 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T11:02:10.889+02:00  WARN 10144 --- [backend] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2024-06-06T11:02:10.891+02:00  INFO 10144 --- [backend] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-06T11:02:10.900+02:00  INFO 10144 --- [backend] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-06T11:02:10.917+02:00 ERROR 10144 --- [backend] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at ts.myapp.MyappApplication.main(MyappApplication.java:8) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:72) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:134) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:147) ~[flyway-core-10.10.0.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 17 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver(SimpleDriverDataSource.java:144) ~[spring-jdbc-6.1.8.jar:6.1.8]
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205) ~[spring-jdbc-6.1.8.jar:6.1.8]
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169) ~[spring-jdbc-6.1.8.jar:6.1.8]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-10.10.0.jar:na]
+	... 23 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 30 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 33 common frames omitted
+
+2024-06-06T11:02:34.753+02:00  INFO 10448 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 10448 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T11:02:34.755+02:00  INFO 10448 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T11:02:35.508+02:00  INFO 10448 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T11:02:35.635+02:00  INFO 10448 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 2 JPA repository interfaces.
+2024-06-06T11:02:36.105+02:00  INFO 10448 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T11:02:36.118+02:00  INFO 10448 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T11:02:36.119+02:00  INFO 10448 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T11:02:36.170+02:00  INFO 10448 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T11:02:36.171+02:00  INFO 10448 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1230 ms
+2024-06-06T11:02:36.186+02:00 DEBUG 10448 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T11:02:36.186+02:00 DEBUG 10448 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T11:02:36.561+02:00  INFO 10448 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T11:02:36.618+02:00  INFO 10448 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.041s)
+2024-06-06T11:02:36.626+02:00  INFO 10448 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T11:02:36.629+02:00  INFO 10448 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T11:02:36.701+02:00  INFO 10448 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T11:02:36.765+02:00  INFO 10448 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T11:02:36.806+02:00  INFO 10448 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T11:02:37.110+02:00  INFO 10448 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T11:02:37.135+02:00  INFO 10448 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T11:02:37.146+02:00  INFO 10448 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62c46e53
+2024-06-06T11:02:37.147+02:00  INFO 10448 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T11:02:37.171+02:00  WARN 10448 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T11:02:37.175+02:00  WARN 10448 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T11:02:37.807+02:00  INFO 10448 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T11:02:37.926+02:00  INFO 10448 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T11:02:37.929+02:00  INFO 10448 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:02:38.121+02:00  INFO 10448 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T11:02:38.485+02:00  WARN 10448 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T11:02:38.494+02:00  INFO 10448 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-06T11:02:38.604+02:00 DEBUG 10448 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2024-06-06T11:02:38.649+02:00  INFO 10448 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5cb6fac3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9fe1e14, org.springframework.security.web.context.SecurityContextHolderFilter@18e0f894, org.springframework.security.web.header.HeaderWriterFilter@33a1bb90, org.springframework.web.filter.CorsFilter@d4e17ec, org.springframework.security.web.authentication.logout.LogoutFilter@590182a6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4015c65b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3818609f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@41d34a11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e03b52f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e681c3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a58d00a, org.springframework.security.web.access.ExceptionTranslationFilter@67398bad, org.springframework.security.web.access.intercept.AuthorizationFilter@6fb8cfa7]
+2024-06-06T11:02:38.691+02:00 DEBUG 10448 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T11:02:38.723+02:00 DEBUG 10448 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T11:02:39.210+02:00  INFO 10448 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T11:02:39.216+02:00  INFO 10448 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.814 seconds (process running for 5.307)
+2024-06-06T11:02:43.890+02:00  INFO 10448 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T11:02:43.890+02:00  INFO 10448 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T11:02:43.890+02:00 DEBUG 10448 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-06T11:02:43.891+02:00 DEBUG 10448 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-06T11:02:43.891+02:00 DEBUG 10448 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-06T11:02:43.891+02:00 DEBUG 10448 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@630e5803
+2024-06-06T11:02:43.892+02:00 DEBUG 10448 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@199d1fb7
+2024-06-06T11:02:43.892+02:00 DEBUG 10448 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T11:02:43.892+02:00  INFO 10448 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-06T11:34:41.963+02:00  INFO 10448 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:34:41.965+02:00  INFO 10448 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T11:34:41.967+02:00  INFO 10448 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T11:34:54.098+02:00  INFO 15328 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 15328 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T11:34:54.100+02:00  INFO 15328 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T11:34:54.856+02:00  INFO 15328 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T11:34:54.981+02:00  INFO 15328 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 2 JPA repository interfaces.
+2024-06-06T11:34:55.445+02:00  INFO 15328 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T11:34:55.458+02:00  INFO 15328 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T11:34:55.459+02:00  INFO 15328 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T11:34:55.509+02:00  INFO 15328 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T11:34:55.509+02:00  INFO 15328 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2024-06-06T11:34:55.524+02:00 DEBUG 15328 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T11:34:55.524+02:00 DEBUG 15328 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T11:34:55.870+02:00  INFO 15328 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T11:34:55.908+02:00  INFO 15328 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.023s)
+2024-06-06T11:34:55.917+02:00  INFO 15328 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T11:34:55.918+02:00  INFO 15328 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T11:34:55.983+02:00  INFO 15328 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T11:34:56.032+02:00  INFO 15328 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T11:34:56.060+02:00  INFO 15328 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T11:34:56.322+02:00  INFO 15328 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T11:34:56.343+02:00  INFO 15328 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T11:34:56.355+02:00  INFO 15328 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@104cfb24
+2024-06-06T11:34:56.358+02:00  INFO 15328 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T11:34:56.378+02:00  WARN 15328 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T11:34:56.381+02:00  WARN 15328 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T11:34:56.995+02:00  INFO 15328 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T11:34:57.112+02:00  INFO 15328 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T11:34:57.114+02:00  INFO 15328 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:34:57.294+02:00  INFO 15328 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T11:34:57.612+02:00  WARN 15328 --- [backend] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatController': Injection of autowired dependencies failed
+2024-06-06T11:34:57.612+02:00  INFO 15328 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:34:57.613+02:00  INFO 15328 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T11:34:57.615+02:00  INFO 15328 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T11:34:57.617+02:00  INFO 15328 --- [backend] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-06T11:34:57.624+02:00  INFO 15328 --- [backend] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-06T11:34:57.638+02:00 ERROR 15328 --- [backend] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatController': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at ts.myapp.MyappApplication.main(MyappApplication.java:8) ~[main/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'OPENAI_API_KEY' in value "${OPENAI_API_KEY}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:153) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:149) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:85) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getPropertyAsRawString(PropertySourcesPropertyResolver.java:74) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:153) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 17 common frames omitted
+
+2024-06-06T11:36:14.764+02:00  INFO 11176 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 11176 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T11:36:14.765+02:00  INFO 11176 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T11:36:15.523+02:00  INFO 11176 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T11:36:15.650+02:00  INFO 11176 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 2 JPA repository interfaces.
+2024-06-06T11:36:16.114+02:00  INFO 11176 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T11:36:16.124+02:00  INFO 11176 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T11:36:16.124+02:00  INFO 11176 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T11:36:16.175+02:00  INFO 11176 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T11:36:16.176+02:00  INFO 11176 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1230 ms
+2024-06-06T11:36:16.192+02:00 DEBUG 11176 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T11:36:16.192+02:00 DEBUG 11176 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T11:36:16.556+02:00  INFO 11176 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T11:36:16.591+02:00  INFO 11176 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2024-06-06T11:36:16.600+02:00  INFO 11176 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T11:36:16.601+02:00  INFO 11176 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T11:36:16.669+02:00  INFO 11176 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T11:36:16.720+02:00  INFO 11176 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T11:36:16.749+02:00  INFO 11176 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T11:36:17.015+02:00  INFO 11176 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T11:36:17.042+02:00  INFO 11176 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T11:36:17.054+02:00  INFO 11176 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15c4b1a4
+2024-06-06T11:36:17.056+02:00  INFO 11176 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T11:36:17.077+02:00  WARN 11176 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T11:36:17.080+02:00  WARN 11176 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T11:36:17.676+02:00  INFO 11176 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T11:36:17.796+02:00  INFO 11176 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T11:36:17.798+02:00  INFO 11176 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:36:17.979+02:00  INFO 11176 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T11:36:18.306+02:00  WARN 11176 --- [backend] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatController': Injection of autowired dependencies failed
+2024-06-06T11:36:18.306+02:00  INFO 11176 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:36:18.308+02:00  INFO 11176 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T11:36:18.310+02:00  INFO 11176 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T11:36:18.312+02:00  INFO 11176 --- [backend] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-06T11:36:18.320+02:00  INFO 11176 --- [backend] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-06T11:36:18.336+02:00 ERROR 11176 --- [backend] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatController': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at ts.myapp.MyappApplication.main(MyappApplication.java:8) ~[main/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'OPENAI_API_KEY' in value "${OPENAI_API_KEY}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:153) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:149) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:85) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getPropertyAsRawString(PropertySourcesPropertyResolver.java:74) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:153) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 17 common frames omitted
+
+2024-06-06T11:37:19.308+02:00  INFO 12188 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 12188 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T11:37:19.309+02:00  INFO 12188 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T11:37:20.063+02:00  INFO 12188 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T11:37:20.188+02:00  INFO 12188 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 2 JPA repository interfaces.
+2024-06-06T11:37:20.659+02:00  INFO 12188 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T11:37:20.673+02:00  INFO 12188 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T11:37:20.674+02:00  INFO 12188 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T11:37:20.728+02:00  INFO 12188 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T11:37:20.728+02:00  INFO 12188 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1237 ms
+2024-06-06T11:37:20.743+02:00 DEBUG 12188 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T11:37:20.743+02:00 DEBUG 12188 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T11:37:21.100+02:00  INFO 12188 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T11:37:21.136+02:00  INFO 12188 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.021s)
+2024-06-06T11:37:21.144+02:00  INFO 12188 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T11:37:21.146+02:00  INFO 12188 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T11:37:21.211+02:00  INFO 12188 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T11:37:21.260+02:00  INFO 12188 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T11:37:21.288+02:00  INFO 12188 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T11:37:21.554+02:00  INFO 12188 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T11:37:21.576+02:00  INFO 12188 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T11:37:21.587+02:00  INFO 12188 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@341964d0
+2024-06-06T11:37:21.589+02:00  INFO 12188 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T11:37:21.611+02:00  WARN 12188 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T11:37:21.614+02:00  WARN 12188 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T11:37:22.204+02:00  INFO 12188 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T11:37:22.320+02:00  INFO 12188 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T11:37:22.323+02:00  INFO 12188 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:37:22.505+02:00  INFO 12188 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T11:37:22.842+02:00  WARN 12188 --- [backend] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'XXX': Injection of autowired dependencies failed
+2024-06-06T11:37:22.842+02:00  INFO 12188 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:37:22.844+02:00  INFO 12188 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T11:37:22.846+02:00  INFO 12188 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T11:37:22.847+02:00  INFO 12188 --- [backend] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-06T11:37:22.856+02:00  INFO 12188 --- [backend] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-06T11:37:22.871+02:00 ERROR 12188 --- [backend] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'XXX': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at ts.myapp.MyappApplication.main(MyappApplication.java:8) ~[main/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'OPENAI_API_KEY' in value "${OPENAI_API_KEY}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:153) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:149) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:85) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getPropertyAsRawString(PropertySourcesPropertyResolver.java:74) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:153) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 17 common frames omitted
+
+2024-06-06T11:41:53.552+02:00  INFO 12108 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 12108 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T11:41:53.554+02:00  INFO 12108 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T11:41:54.314+02:00  INFO 12108 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T11:41:54.433+02:00  INFO 12108 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 2 JPA repository interfaces.
+2024-06-06T11:41:54.910+02:00  INFO 12108 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T11:41:54.924+02:00  INFO 12108 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T11:41:54.924+02:00  INFO 12108 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T11:41:54.980+02:00  INFO 12108 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T11:41:54.980+02:00  INFO 12108 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1243 ms
+2024-06-06T11:41:54.995+02:00 DEBUG 12108 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T11:41:54.995+02:00 DEBUG 12108 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T11:41:55.378+02:00  INFO 12108 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T11:41:55.415+02:00  INFO 12108 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2024-06-06T11:41:55.423+02:00  INFO 12108 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T11:41:55.425+02:00  INFO 12108 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T11:41:55.492+02:00  INFO 12108 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T11:41:55.541+02:00  INFO 12108 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T11:41:55.571+02:00  INFO 12108 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T11:41:55.843+02:00  INFO 12108 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T11:41:55.864+02:00  INFO 12108 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T11:41:55.876+02:00  INFO 12108 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fccf49e
+2024-06-06T11:41:55.877+02:00  INFO 12108 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T11:41:55.901+02:00  WARN 12108 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T11:41:55.905+02:00  WARN 12108 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T11:41:56.513+02:00  INFO 12108 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T11:41:56.631+02:00  INFO 12108 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T11:41:56.634+02:00  INFO 12108 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:41:56.814+02:00  INFO 12108 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T11:41:57.162+02:00  WARN 12108 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T11:41:57.171+02:00  INFO 12108 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-06T11:41:57.263+02:00 DEBUG 12108 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-06-06T11:41:57.306+02:00  INFO 12108 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ab8c3c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2978d342, org.springframework.security.web.context.SecurityContextHolderFilter@6a339bc1, org.springframework.security.web.header.HeaderWriterFilter@3554de46, org.springframework.web.filter.CorsFilter@7dbf92aa, org.springframework.security.web.authentication.logout.LogoutFilter@16486ab3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ef6177c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7ca46aaf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@122557f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@574f89bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59a71bef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e8f20bf, org.springframework.security.web.access.ExceptionTranslationFilter@2b3cbc2c, org.springframework.security.web.access.intercept.AuthorizationFilter@2806c788]
+2024-06-06T11:41:57.348+02:00 DEBUG 12108 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T11:41:57.381+02:00 DEBUG 12108 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T11:41:57.829+02:00  INFO 12108 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T11:41:57.837+02:00  INFO 12108 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.638 seconds (process running for 5.135)
+2024-06-06T11:42:50.295+02:00  INFO 12108 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T11:42:50.295+02:00  INFO 12108 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T11:42:50.295+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-06T11:42:50.295+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-06T11:42:50.296+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-06T11:42:50.296+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4c255e8
+2024-06-06T11:42:50.296+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@216906a0
+2024-06-06T11:42:50.297+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T11:42:50.297+02:00  INFO 12108 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-06T11:43:01.332+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-06-06T11:43:01.333+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.Controller#home()
+2024-06-06T11:43:01.347+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-06T11:43:01.347+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<html><body>Odpowiedź serwera dla adresu: http://localhost:8080 </br><h1>@GetMapping("/")</h1></body (truncated)..."]
+2024-06-06T11:43:01.350+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T11:43:05.348+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/auth/api/test-chatu", parameters={masked}
+2024-06-06T11:43:05.351+02:00  WARN 12108 --- [backend] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-06-06T11:43:05.351+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2024-06-06T11:43:05.356+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={masked}
+2024-06-06T11:43:05.356+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T11:43:05.363+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T11:43:05.364+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 11:43:05 CEST 2024, status=405, error=Method Not Allowed, message=Method 'POST (truncated)...]
+2024-06-06T11:43:05.375+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
+2024-06-06T11:43:14.560+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/auth/api/test-chatu", parameters={masked}
+2024-06-06T11:43:14.561+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.ChatController#getChatResponse()
+2024-06-06T11:43:14.582+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : HTTP POST https://api.openai.com/v1/chat/completions
+2024-06-06T11:43:14.589+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2024-06-06T11:43:14.590+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : Writing [{messages=[Ljava.lang.Object;@5629581a, model=gpt-3.5-turbo}] as "application/json"
+2024-06-06T11:43:15.942+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : Response 200 OK
+2024-06-06T11:43:15.947+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2024-06-06T11:43:15.952+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-06T11:43:15.952+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-9X3wJi5bXzZdUWWcj34CSHjgjloqt",<EOL>  "object": "chat.completion",<EOL>  "created": 1717 (truncated)..."]
+2024-06-06T11:43:15.954+02:00 DEBUG 12108 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T11:47:43.468+02:00  INFO 12108 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:47:43.470+02:00  INFO 12108 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T11:47:43.472+02:00  INFO 12108 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T11:47:46.228+02:00  INFO 14924 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 14924 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T11:47:46.230+02:00  INFO 14924 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T11:47:46.965+02:00  INFO 14924 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T11:47:47.089+02:00  INFO 14924 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 2 JPA repository interfaces.
+2024-06-06T11:47:47.563+02:00  INFO 14924 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T11:47:47.578+02:00  INFO 14924 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T11:47:47.578+02:00  INFO 14924 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T11:47:47.634+02:00  INFO 14924 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T11:47:47.634+02:00  INFO 14924 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
+2024-06-06T11:47:47.649+02:00 DEBUG 14924 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T11:47:47.650+02:00 DEBUG 14924 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T11:47:48.015+02:00  INFO 14924 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T11:47:48.051+02:00  INFO 14924 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.021s)
+2024-06-06T11:47:48.060+02:00  INFO 14924 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T11:47:48.062+02:00  INFO 14924 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T11:47:48.127+02:00  INFO 14924 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T11:47:48.177+02:00  INFO 14924 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T11:47:48.205+02:00  INFO 14924 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T11:47:48.481+02:00  INFO 14924 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T11:47:48.509+02:00  INFO 14924 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T11:47:48.522+02:00  INFO 14924 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15c4b1a4
+2024-06-06T11:47:48.524+02:00  INFO 14924 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T11:47:48.547+02:00  WARN 14924 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T11:47:48.551+02:00  WARN 14924 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T11:47:49.172+02:00  INFO 14924 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T11:47:49.297+02:00  INFO 14924 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T11:47:49.300+02:00  INFO 14924 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:47:49.479+02:00  INFO 14924 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T11:47:49.838+02:00  WARN 14924 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T11:47:49.848+02:00  INFO 14924 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-06T11:47:49.946+02:00 DEBUG 14924 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-06-06T11:47:49.988+02:00  INFO 14924 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8d56ddd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d4ee7d7, org.springframework.security.web.context.SecurityContextHolderFilter@461e0652, org.springframework.security.web.header.HeaderWriterFilter@6af6a3b, org.springframework.web.filter.CorsFilter@6d7e2c53, org.springframework.security.web.authentication.logout.LogoutFilter@45b4d2ff, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c1a5092, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2d44025b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@62ae5180, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f8614ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@273cb729, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4136638d, org.springframework.security.web.access.ExceptionTranslationFilter@20c4be8d, org.springframework.security.web.access.intercept.AuthorizationFilter@66032b8d]
+2024-06-06T11:47:50.026+02:00 DEBUG 14924 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T11:47:50.053+02:00 DEBUG 14924 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T11:47:50.507+02:00  INFO 14924 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T11:47:50.512+02:00  INFO 14924 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.637 seconds (process running for 5.121)
+2024-06-06T11:48:15.558+02:00  INFO 14924 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T11:48:15.558+02:00  INFO 14924 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T11:48:15.558+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-06T11:48:15.558+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-06T11:48:15.558+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-06T11:48:15.559+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7da3d617
+2024-06-06T11:48:15.559+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@eb7d4ba
+2024-06-06T11:48:15.559+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T11:48:15.559+02:00  INFO 14924 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-06T11:48:21.806+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-06-06T11:48:21.806+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.Controller#home()
+2024-06-06T11:48:21.821+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-06T11:48:21.822+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<html><body>Odpowiedź serwera dla adresu: http://localhost:8080 </br><h1>@GetMapping("/")</h1></body (truncated)..."]
+2024-06-06T11:48:21.826+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T11:48:25.147+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/auth/api/test-chatu", parameters={masked}
+2024-06-06T11:48:25.148+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.ChatController#getChatResponse()
+2024-06-06T11:48:25.164+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.web.client.RestTemplate              : HTTP POST https://api.openai.com/v1/chat/completions
+2024-06-06T11:48:25.172+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2024-06-06T11:48:25.174+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.web.client.RestTemplate              : Writing [{max_tokens=20, messages=[Ljava.lang.Object;@5769b86a, model=gpt-3.5-turbo}] as "application/json"
+2024-06-06T11:48:26.241+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.web.client.RestTemplate              : Response 200 OK
+2024-06-06T11:48:26.243+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2024-06-06T11:48:26.248+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-06T11:48:26.249+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-9X41Kt1awEo0gZ3H7Q4WTMuob0TYd",<EOL>  "object": "chat.completion",<EOL>  "created": 1717 (truncated)..."]
+2024-06-06T11:48:26.251+02:00 DEBUG 14924 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T11:49:26.169+02:00  INFO 14924 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:49:26.171+02:00  INFO 14924 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T11:49:26.173+02:00  INFO 14924 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T11:49:28.868+02:00  INFO 6224 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 6224 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T11:49:28.869+02:00  INFO 6224 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T11:49:29.614+02:00  INFO 6224 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T11:49:29.736+02:00  INFO 6224 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 2 JPA repository interfaces.
+2024-06-06T11:49:30.199+02:00  INFO 6224 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T11:49:30.208+02:00  INFO 6224 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T11:49:30.208+02:00  INFO 6224 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T11:49:30.260+02:00  INFO 6224 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T11:49:30.260+02:00  INFO 6224 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1214 ms
+2024-06-06T11:49:30.275+02:00 DEBUG 6224 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T11:49:30.276+02:00 DEBUG 6224 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T11:49:30.646+02:00  INFO 6224 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T11:49:30.687+02:00  INFO 6224 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.021s)
+2024-06-06T11:49:30.695+02:00  INFO 6224 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T11:49:30.697+02:00  INFO 6224 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T11:49:30.756+02:00  INFO 6224 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T11:49:30.805+02:00  INFO 6224 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T11:49:30.833+02:00  INFO 6224 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T11:49:31.097+02:00  INFO 6224 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T11:49:31.122+02:00  INFO 6224 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T11:49:31.134+02:00  INFO 6224 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@104cfb24
+2024-06-06T11:49:31.136+02:00  INFO 6224 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T11:49:31.158+02:00  WARN 6224 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T11:49:31.161+02:00  WARN 6224 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T11:49:31.755+02:00  INFO 6224 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T11:49:31.872+02:00  INFO 6224 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T11:49:31.875+02:00  INFO 6224 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T11:49:32.056+02:00  INFO 6224 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T11:49:32.410+02:00  WARN 6224 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T11:49:32.420+02:00  INFO 6224 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-06T11:49:32.513+02:00 DEBUG 6224 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-06-06T11:49:32.560+02:00  INFO 6224 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@757bbd02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@194feb27, org.springframework.security.web.context.SecurityContextHolderFilter@c4fac3a, org.springframework.security.web.header.HeaderWriterFilter@6e681c3b, org.springframework.web.filter.CorsFilter@316745d8, org.springframework.security.web.authentication.logout.LogoutFilter@11261fc9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41d34a11, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6a339bc1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3df920, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3818609f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b3cbc2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2806c788, org.springframework.security.web.access.ExceptionTranslationFilter@2e03b52f, org.springframework.security.web.access.intercept.AuthorizationFilter@d4e17ec]
+2024-06-06T11:49:32.598+02:00 DEBUG 6224 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T11:49:32.625+02:00 DEBUG 6224 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T11:49:33.072+02:00  INFO 6224 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T11:49:33.077+02:00  INFO 6224 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.565 seconds (process running for 5.07)
+2024-06-06T11:49:48.002+02:00  INFO 6224 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T11:49:48.002+02:00  INFO 6224 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T11:49:48.002+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-06T11:49:48.003+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-06T11:49:48.003+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-06T11:49:48.003+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@511cc6fc
+2024-06-06T11:49:48.004+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7fb539df
+2024-06-06T11:49:48.004+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T11:49:48.004+02:00  INFO 6224 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-06T11:49:51.791+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-06-06T11:49:51.791+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.Controller#home()
+2024-06-06T11:49:51.805+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-06T11:49:51.806+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<html><body>Odpowiedź serwera dla adresu: http://localhost:8080 </br><h1>@GetMapping("/")</h1></body (truncated)..."]
+2024-06-06T11:49:51.810+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T11:49:53.707+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/auth/api/test-chatu", parameters={masked}
+2024-06-06T11:49:53.707+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.ChatController#getChatResponse()
+2024-06-06T11:49:53.724+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : HTTP POST https://api.openai.com/v1/chat/completions
+2024-06-06T11:49:53.730+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2024-06-06T11:49:53.733+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Writing [{max_tokens=20, messages=[Ljava.lang.Object;@3f6d7eb3, model=gpt-3.5-turbo}] as "application/json"
+2024-06-06T11:49:54.988+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Response 200 OK
+2024-06-06T11:49:54.989+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2024-06-06T11:49:54.991+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2024-06-06T11:49:54.992+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-9X42lFD5bA9VbUh65X6oQcwRgVbhl",<EOL>  "object": "chat.completion",<EOL>  "created": 1717 (truncated)..."]
+2024-06-06T11:49:54.993+02:00 DEBUG 6224 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T12:11:44.917+02:00  INFO 6224 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T12:11:44.920+02:00  INFO 6224 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T12:11:44.922+02:00  INFO 6224 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T12:11:47.592+02:00  INFO 16928 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 16928 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T12:11:47.594+02:00  INFO 16928 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T12:11:48.383+02:00  INFO 16928 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T12:11:48.522+02:00  INFO 16928 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 2 JPA repository interfaces.
+2024-06-06T12:11:48.988+02:00  INFO 16928 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T12:11:49.008+02:00  INFO 16928 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T12:11:49.008+02:00  INFO 16928 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T12:11:49.061+02:00  INFO 16928 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T12:11:49.062+02:00  INFO 16928 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1279 ms
+2024-06-06T12:11:49.077+02:00 DEBUG 16928 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T12:11:49.077+02:00 DEBUG 16928 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T12:11:49.455+02:00  INFO 16928 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T12:11:49.494+02:00  INFO 16928 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.022s)
+2024-06-06T12:11:49.503+02:00  INFO 16928 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T12:11:49.505+02:00  INFO 16928 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T12:11:49.571+02:00  INFO 16928 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T12:11:49.621+02:00  INFO 16928 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T12:11:49.650+02:00  INFO 16928 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T12:11:49.916+02:00  INFO 16928 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T12:11:49.938+02:00  INFO 16928 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T12:11:49.950+02:00  INFO 16928 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@582ea164
+2024-06-06T12:11:49.952+02:00  INFO 16928 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T12:11:49.974+02:00  WARN 16928 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T12:11:49.977+02:00  WARN 16928 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T12:11:50.603+02:00  INFO 16928 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T12:11:50.721+02:00  INFO 16928 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T12:11:50.723+02:00  INFO 16928 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T12:11:50.904+02:00  INFO 16928 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T12:11:51.266+02:00  WARN 16928 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T12:11:51.275+02:00  INFO 16928 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-06T12:11:51.370+02:00 DEBUG 16928 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-06-06T12:11:51.410+02:00  INFO 16928 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@316745d8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3df920, org.springframework.security.web.context.SecurityContextHolderFilter@3818609f, org.springframework.security.web.header.HeaderWriterFilter@66008321, org.springframework.web.filter.CorsFilter@2806c788, org.springframework.security.web.authentication.logout.LogoutFilter@76603c44, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53af65eb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@574f89bf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4ef6177c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b3cbc2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3554de46, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45b4d2ff, org.springframework.security.web.access.ExceptionTranslationFilter@6e681c3b, org.springframework.security.web.access.intercept.AuthorizationFilter@2a58d00a]
+2024-06-06T12:11:51.448+02:00 DEBUG 16928 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T12:11:51.475+02:00 DEBUG 16928 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T12:11:51.942+02:00  INFO 16928 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T12:11:51.948+02:00  INFO 16928 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.706 seconds (process running for 5.247)
+2024-06-06T12:11:58.450+02:00  INFO 16928 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T12:11:58.450+02:00  INFO 16928 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T12:11:58.451+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-06T12:11:58.451+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-06T12:11:58.451+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-06T12:11:58.451+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@216906a0
+2024-06-06T12:11:58.452+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2c3d46d6
+2024-06-06T12:11:58.452+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T12:11:58.452+02:00  INFO 16928 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-06T12:11:58.607+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-06-06T12:11:58.608+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.Controller#home()
+2024-06-06T12:11:58.623+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-06T12:11:58.623+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<html><body>Odpowiedź serwera dla adresu: http://localhost:8080 </br><h1>@GetMapping("/")</h1></body (truncated)..."]
+2024-06-06T12:11:58.628+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T12:12:00.816+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/auth/api/test-chatu", parameters={masked}
+2024-06-06T12:12:00.816+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.ChatController#getChatResponse()
+2024-06-06T12:12:00.836+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : HTTP POST https://api.openai.com/v1/chat/completions
+2024-06-06T12:12:00.842+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2024-06-06T12:12:00.843+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Writing [{"max_tokens":20,"messages":[{"role":"system","content":"You are a helpful assistant."},{"role":"user","content":"Hello, how are you?"}],"model":"gpt-4"}] as "application/json"
+2024-06-06T12:12:02.745+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Response 200 OK
+2024-06-06T12:12:02.747+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2024-06-06T12:12:02.750+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2024-06-06T12:12:02.750+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-9X4O9wzuM3qQffZRr3JqkCIR2hdAM",<EOL>  "object": "chat.completion",<EOL>  "created": 1717 (truncated)..."]
+2024-06-06T12:12:02.751+02:00 DEBUG 16928 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T12:14:36.351+02:00  INFO 16928 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T12:14:36.353+02:00  INFO 16928 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T12:14:36.355+02:00  INFO 16928 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T12:14:38.988+02:00  INFO 1304 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 1304 (C:\Users\tomek\IdeaProjects\myapp\backend\build\classes\java\main started by tomek in C:\Users\tomek\IdeaProjects\myapp\backend)
+2024-06-06T12:14:38.989+02:00  INFO 1304 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T12:14:39.745+02:00  INFO 1304 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T12:14:39.870+02:00  INFO 1304 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
+2024-06-06T12:14:40.332+02:00  INFO 1304 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T12:14:40.346+02:00  INFO 1304 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T12:14:40.346+02:00  INFO 1304 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T12:14:40.397+02:00  INFO 1304 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T12:14:40.397+02:00  INFO 1304 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2024-06-06T12:14:40.413+02:00 DEBUG 1304 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-06T12:14:40.413+02:00 DEBUG 1304 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T12:14:40.788+02:00  INFO 1304 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-06T12:14:40.822+02:00  INFO 1304 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2024-06-06T12:14:40.831+02:00  INFO 1304 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 1
+2024-06-06T12:14:40.832+02:00  INFO 1304 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-06T12:14:40.900+02:00  INFO 1304 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T12:14:40.950+02:00  INFO 1304 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T12:14:40.979+02:00  INFO 1304 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T12:14:41.242+02:00  INFO 1304 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T12:14:41.264+02:00  INFO 1304 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T12:14:41.276+02:00  INFO 1304 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57cff804
+2024-06-06T12:14:41.277+02:00  INFO 1304 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T12:14:41.298+02:00  WARN 1304 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-06T12:14:41.301+02:00  WARN 1304 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-06T12:14:41.900+02:00  INFO 1304 --- [backend] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: ts.myapp.models.table1.Table1 (class must be instantiated by Interceptor)
+2024-06-06T12:14:42.020+02:00  INFO 1304 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T12:14:42.022+02:00  INFO 1304 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T12:14:42.201+02:00  INFO 1304 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-06T12:14:42.547+02:00  WARN 1304 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T12:14:42.557+02:00  INFO 1304 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-06T12:14:42.653+02:00 DEBUG 1304 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-06-06T12:14:42.694+02:00  INFO 1304 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@122557f8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e8f20bf, org.springframework.security.web.context.SecurityContextHolderFilter@2fbc704a, org.springframework.security.web.header.HeaderWriterFilter@6a339bc1, org.springframework.web.filter.CorsFilter@718212ef, org.springframework.security.web.authentication.logout.LogoutFilter@5cb6fac3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@340b7fca, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@590182a6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@70a9f4b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@169f4152, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71443983, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@488bf7cd, org.springframework.security.web.access.ExceptionTranslationFilter@70dbd79f, org.springframework.security.web.access.intercept.AuthorizationFilter@2aafd790]
+2024-06-06T12:14:42.730+02:00 DEBUG 1304 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T12:14:42.757+02:00 DEBUG 1304 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T12:14:43.197+02:00  INFO 1304 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T12:14:43.203+02:00  INFO 1304 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.574 seconds (process running for 5.06)
+2024-06-06T12:14:47.662+02:00  INFO 1304 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T12:14:47.662+02:00  INFO 1304 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T12:14:47.662+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-06T12:14:47.662+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-06T12:14:47.663+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-06T12:14:47.663+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@296c0293
+2024-06-06T12:14:47.663+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2d728a9c
+2024-06-06T12:14:47.664+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T12:14:47.664+02:00  INFO 1304 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-06T12:14:51.134+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-06-06T12:14:51.134+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.Controller#home()
+2024-06-06T12:14:51.151+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-06T12:14:51.152+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<html><body>Odpowiedź serwera dla adresu: http://localhost:8080 </br><h1>@GetMapping("/")</h1></body (truncated)..."]
+2024-06-06T12:14:51.156+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T12:14:53.145+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-06-06T12:14:53.145+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.Controller#home()
+2024-06-06T12:14:53.146+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-06T12:14:53.146+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<html><body>Odpowiedź serwera dla adresu: http://localhost:8080 </br><h1>@GetMapping("/")</h1></body (truncated)..."]
+2024-06-06T12:14:53.146+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-06T12:14:56.769+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/auth/api/test-chatu", parameters={masked}
+2024-06-06T12:14:56.770+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.ChatController#getChatResponse()
+2024-06-06T12:14:56.790+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : HTTP POST https://api.openai.com/v1/chat/completions
+2024-06-06T12:14:56.796+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2024-06-06T12:14:56.798+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Writing [{"max_tokens":20,"messages":[{"role":"user","content":"Witaj, czy mówisz po polsku?"},{"role":"bot","content":"Tak, mówię po polsku."},{"role":"user","content":"Która jest aktualnie godzina?"}],"model":"gpt-4"}] as "application/json"
+2024-06-06T12:14:57.355+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Response 400 BAD_REQUEST
+2024-06-06T12:14:57.362+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "message": "Invalid value: 'bot'. Supported values are: 'system', 'assistant', 'user', 'function', and 'tool'.",<EOL>    "type": "invalid_request_error",<EOL>    "param": "messages[1].role",<EOL>    "code": "invalid_value"<EOL>  }<EOL>}"
+2024-06-06T12:14:57.363+02:00 ERROR 1304 --- [backend] [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "message": "Invalid value: 'bot'. Supported values are: 'system', 'assistant', 'user', 'function', and 'tool'.",<EOL>    "type": "invalid_request_error",<EOL>    "param": "messages[1].role",<EOL>    "code": "invalid_value"<EOL>  }<EOL>}"] with root cause
+
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "message": "Invalid value: 'bot'. Supported values are: 'system', 'assistant', 'user', 'function', and 'tool'.",<EOL>    "type": "invalid_request_error",<EOL>    "param": "messages[1].role",<EOL>    "code": "invalid_value"<EOL>  }<EOL>}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672) ~[spring-web-6.1.8.jar:6.1.8]
+	at ts.myapp.controllers.ChatController.getChatResponse(ChatController.java:60) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:189) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:175) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2024-06-06T12:14:57.371+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={masked}
+2024-06-06T12:14:57.372+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T12:14:57.378+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T12:14:57.378+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 12:14:57 CEST 2024, status=500, error=Internal Server Error, message=400 Bad R (truncated)...]
+2024-06-06T12:14:57.389+02:00 DEBUG 1304 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2024-06-06T12:15:10.705+02:00  INFO 1304 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T12:15:10.707+02:00  INFO 1304 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T12:15:10.709+02:00  INFO 1304 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
