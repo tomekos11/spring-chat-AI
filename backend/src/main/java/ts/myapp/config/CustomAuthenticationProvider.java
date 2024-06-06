@@ -33,8 +33,10 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
         // Sprawdź czy użytkownik istnieje i hasło się zgadza
         if (user != null && user.getPassword().equals(password)) {
+            System.out.println("zalogowano uzytkownika");
             return new UsernamePasswordAuthenticationToken(username, password, getAuthorities());
         } else {
+            System.out.println("nie udalo sie zalogowac");
             // Rzucenie wyjątku AuthenticationException w przypadku niepowodzenia uwierzytelnienia
             throw new BadCredentialsException("Invalid username or password");
         }

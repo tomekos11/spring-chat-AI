@@ -12,7 +12,7 @@ public class Cors implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Ustawia globalne CORS dla wszystkich endpointów
-                .allowedOrigins("*") // Pozwala na żądania z dowolnego źródła
+                .allowedOrigins("http://localhost:9000") // Pozwala na żądania z dowolnego źródła
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Pozwala na określone metody HTTP
                 .allowedHeaders("*"); // Pozwala na określone nagłówki HTTP
     }

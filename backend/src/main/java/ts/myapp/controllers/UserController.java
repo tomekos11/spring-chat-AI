@@ -31,34 +31,27 @@ public class UserController {
 
     @PostMapping("/api/auth/register")
     public ApiResponse<Map<String, Object>> registerUser(@Valid @RequestBody RegisterRequest request, BindingResult result) {
-            String validationResult = Validation.checkValidation(result);
+        String validationResult = Validation.checkValidation(result);
 
-            if (validationResult != null) {
-                return new ApiResponse<>(false, null, "Nie udało się stworzyć konta", validationResult);
-            }
-            else if (userRepository.findUserByUsername(request.username) != null) {
-                return new ApiResponse<>(false, null, "Taki użytkownik już istnieje", null);
-            }
+        if (validationResult != null) {
+            return new ApiResponse<>(false, null, "Nie udało się stworzyć konta", validationResult);
+        } else if (userRepository.findUserByUsername(request.username) != null) {
+            return new ApiResponse<>(false, null, "Taki użytkownik już istnieje", null);
+        }
 
-            Map<String, Object> data = new HashMap<>();
-            data.put("username", request.username);
+        Map<String, Object> data = new HashMap<>();
+        data.put("username", request.username);
 
-            User newUser = new User(
-                    request.username,
-                    request.password,
-                    "STUDENT",
-                    request.name,
-                    request.surname,
-                    request.email,
-                    request.phone
-            );
-            userRepository.save(newUser);
-            return new ApiResponse<>(true, data , "Stworzono nowego użytkownika", null);
-    }
-
-    @PostMapping("/api/auth/login")
-    public Authentication login(Authentication authentication) {
-        System.out.println("XDDD");
-        return authenticationProvider.authenticate(authentication);
+        User newUser = new User(
+                request.username,
+                request.password,
+                "STUDENT",
+                request.name,
+                request.surname,
+                request.email,
+                request.phone
+        );
+        userRepository.save(newUser);
+        return new ApiResponse<>(true, data, "Stworzono nowego użytkownika", null);
     }
 }
