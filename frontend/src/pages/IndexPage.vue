@@ -1,11 +1,15 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    {{ xd }}
+    <q-btn
+      label="Zarejestruj się"
+      @click="$router.push('/register')"
+    />
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+// import { useRouter } from 'vue-router';
 
-const xd = ref('xD');
+
+// const router = useRouter();
 </script>
