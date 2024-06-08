@@ -25,10 +25,6 @@ import java.util.HashMap;
 public class UserController {
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private AuthenticationManagerBuilder authenticationManager;
-    @Autowired
-    private CustomAuthenticationProvider authenticationProvider;
 
     @PostMapping("/api/auth/register")
     public ApiResponse<Map<String, Object>> registerUser(@Valid @RequestBody RegisterRequest request, BindingResult result) {
@@ -63,10 +59,6 @@ public class UserController {
 
 
         User user = userRepository.findUserByUsername(currentUserName);
-
-//        Map<String, Object> data = new HashMap<>();
-//        JSONObject obj = new JSONObject().put("user", user);
-
 
         return new ApiResponse<>(true, user, "Zwrócono dane użytkownika", null);
     }
