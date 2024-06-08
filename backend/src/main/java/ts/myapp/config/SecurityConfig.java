@@ -14,6 +14,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.savedrequest.NullRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -36,10 +37,11 @@ public class SecurityConfig {
         auth.authenticationProvider(authenticationProvider);
     }
 
+
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:9000"));
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:9000, http://127.0.0.1:9000"));
         configuration.setAllowedMethods(Arrays.asList("GET", "PUT", "POST", "DELETE", "OPTIONS", "HEAD"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
@@ -50,7 +52,6 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        RequestCache nullRequestCache = new NullRequestCache();
         http
             .csrf(AbstractHttpConfigurer::disable)
             .cors((cors) -> cors
@@ -58,6 +59,7 @@ public class SecurityConfig {
             )
             .authorizeHttpRequests((authz) -> authz
                 .requestMatchers(HttpMethod.OPTIONS).permitAll()
+                .requestMatchers("/logout-success").permitAll()
                 .requestMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated()
             )

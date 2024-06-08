@@ -1,5 +1,6 @@
 import { boot } from 'quasar/wrappers';
 import axios, { AxiosInstance } from 'axios';
+import { useUserStore } from 'src/stores/userStore';
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
@@ -26,6 +27,17 @@ api.interceptors.request.use(
     return config;
   },
   error => {
+    return Promise.reject(error);
+  }
+);
+
+api.interceptors.response.use(
+  response => {
+    if (response.headers['content-type'] && response.headers['content-type'].includes('text')) {
+      useUserStore().logout();
+    }
+    return response;
+  }, error => {
     return Promise.reject(error);
   }
 );

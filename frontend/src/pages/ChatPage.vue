@@ -9,7 +9,7 @@
     >
       <div>
         <q-chat-message
-          v-for="(userMessage, index) in useUserStore().currentConversation"
+          v-for="(userMessage, index) in useUserStore().currentConversation.messages"
           :key="index"
           :avatar="userMessage.role === 'user' ? 'https://cdn.quasar.dev/img/avatar1.jpg' : 'https://cdn.quasar.dev/img/avatar5.jpg'"
           :text="[userMessage.content]"
@@ -20,6 +20,12 @@
         />
       </div>
       <div style="position: sticky; bottom: 10px; z-index: 300;">
+        <div
+          class="text-caption text-grey cursor-pointer text-center"
+          @click="useUserStore().startNewChat()"
+        >
+          Zacznij nowy czat
+        </div>
         <q-input
           v-model="message"
           class="q-mt-auto bg-grey-2"
@@ -31,7 +37,7 @@
           <template #append>
             <div class="column justify-end full-width q-mt-auto">
               <q-btn
-                v-if="useUserStore().currentConversation.length > 0"
+                v-if="useUserStore().currentConversation.messages.length > 0"
                 flat
                 rounded
                 dense
@@ -45,6 +51,7 @@
                 color="dark"
                 icon="send"
                 class="q-mb-sm"
+                @click="sendMessage()"
               />
             </div>
           </template>
@@ -62,14 +69,19 @@
 </template>
 
 <script setup lang="ts">
+import { useActionsStore } from 'src/stores/actionsStore';
 import { useUserStore } from 'src/stores/userStore';
 import { ref, watch } from 'vue';
 
 const message = ref('');
 
 const sendMessage = () => {
-  useUserStore().sendMessage(message.value);
-  message.value = '';
+  if (!useUserStore().isUserLogged()) {
+    useActionsStore().openLoginDialog();
+  } else {
+    useUserStore().sendMessage(message.value);
+    message.value = '';
+  }
 };
 
 watch(() => useUserStore().loading, (newVal) => {

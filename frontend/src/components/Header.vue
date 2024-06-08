@@ -8,6 +8,7 @@
         flat
         dense
         round
+        :disable="!useUserStore().isUserLogged()"
         icon="menu"
         aria-label="Menu"
         @click="useActionsStore().openCloseDrawer()"
@@ -27,9 +28,10 @@
       />
     </q-toolbar>
     <q-menu
-      v-if="openedMenu"
+      v-model="openedMenu"
       anchor="bottom end"
       self="top right"
+      no-parent-event
     >
       <q-list style="min-width: 200px; text-wrap: nowrap;">
         <q-item
@@ -62,11 +64,27 @@
           </q-item-section>
           <q-item-section>Zapisz konwersacje</q-item-section>
         </q-item>
+        <q-item
+          v-close-popup
+          clickable
+          @click="useUserStore().logout()"
+        >
+          <q-item-section avatar>
+            <q-avatar
+              rounded
+              color="red-7"
+              text-color="white"
+              icon="logout"
+              size="md"
+            />
+          </q-item-section>
+          <q-item-section>Wyloguj się</q-item-section>
+        </q-item>
       </q-list>
     </q-menu>
     <q-dialog
       v-if="!useUserStore().isUserLogged()"
-      v-model="openedDialog"
+      v-model="useActionsStore().isLoginDialogOpened"
     >
       <login-register />
     </q-dialog>
@@ -79,14 +97,13 @@ import LoginRegister from 'components/LoginRegister.vue';
 import { useUserStore } from 'src/stores/userStore';
 import { useActionsStore } from 'src/stores/actionsStore';
 
-const openedDialog = ref(false);
 const openedMenu = ref(false);
 
 const OpenDialogOrMenu = () => {
   if (useUserStore().isUserLogged()) {
-    openedMenu.value = true;
+    openedMenu.value = !openedMenu.value;
   } else {
-    openedDialog.value = true;
+    useActionsStore().isLoginDialogOpened = true;
   }
 };
 </script>

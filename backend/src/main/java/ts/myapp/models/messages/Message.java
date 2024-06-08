@@ -36,4 +36,11 @@ public class Message {
     @Column(name="date")
     private LocalDateTime date;
 
+    public Message(String role, String content, Conversation conversation, LocalDateTime date) {
+        this.role = role;
+        this.content = content;
+        this.conv_id = conversation;
+        this.date = date;
+    }
+
 }

@@ -1,19 +1,17 @@
 package ts.myapp.controllers;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ts.myapp.config.CustomAuthenticationProvider;
 import ts.myapp.models.users.User;
 import ts.myapp.models.users.UserRepository;
-import ts.myapp.models.users.requests.LoginRequest;
 import ts.myapp.models.users.requests.RegisterRequest;
 import ts.myapp.services.ApiResponse;
 import ts.myapp.validation.Validation;
@@ -25,6 +23,9 @@ import java.util.HashMap;
 public class UserController {
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private CustomAuthenticationProvider authenticationProvider;
 
     @PostMapping("/api/auth/register")
     public ApiResponse<Map<String, Object>> registerUser(@Valid @RequestBody RegisterRequest request, BindingResult result) {
@@ -63,4 +64,18 @@ public class UserController {
         return new ApiResponse<>(true, user, "Zwrócono dane użytkownika", null);
     }
 
+    @GetMapping("/api/auth/logout")
+    public ApiResponse<String> logout(HttpServletRequest request, HttpServletResponse response) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if (authentication == null || !authentication.isAuthenticated() || authentication.getPrincipal().equals("anonymousUser")) {
+            return new ApiResponse<>(false, null, "Nie jesteś zalogowany.", null);
+        }
+
+        SecurityContextLogoutHandler logoutHandler = new SecurityContextLogoutHandler();
+        logoutHandler.logout(request, response, authentication);
+
+
+        return new ApiResponse<>(true, "Wylogowano pomyślnie", "Użytkownik został wylogowany.", null);
+    }
 }

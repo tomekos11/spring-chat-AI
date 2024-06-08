@@ -1,8 +1,9 @@
 interface ChatChoice {
     index: number;
     message: {
-        role: string;
+        role: 'user' | 'assistant';
         content: string;
+        date: number[]
     };
     logprobs: null; // null lub dowolny obiekt
     finish_reason: string;

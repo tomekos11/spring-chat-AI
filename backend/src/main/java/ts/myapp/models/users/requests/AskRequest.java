@@ -1,14 +1,15 @@
 package ts.myapp.models.users.requests;
+import jakarta.annotation.Nullable;
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class AskRequest {
     private List<Message> messages;
 
-    public List<Message> getMessages() {
-        return messages;
-    }
+    @Nullable
+    private Integer conversationId;
 
-    public void setMessages(List<Message> messages) {
-        this.messages = messages;
-    }
+    private boolean wantToStartConversation;
 }

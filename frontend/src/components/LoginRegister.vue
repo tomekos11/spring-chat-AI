@@ -17,7 +17,17 @@
           label="Rejestracja"
         />
       </q-tabs>
-
+      <q-tab-panel
+        name="before"
+        class="q-pb-none text-center"
+      >
+        <span class="text-subtitle1">
+          Zaloguj się aby móc korzystać z mocy AI.
+        </span><br>
+        <span class="text-subtitle2 text-weight-medium">
+          Alternatywa to 5.0 😃
+        </span>
+      </q-tab-panel>
       <q-tab-panels v-model="tab">
         <q-tab-panel name="login">
           <q-form
@@ -195,12 +205,12 @@ const login = () => {
       });
 
       api.get('/api/auth/me', {})
-        .then(res => {
-          useUserStore().data = res.data.data;
-        })
-        .catch(err => {
-          console.log(err);
-        });
+        .then(res => { useUserStore().data = res.data.data; })
+        .catch(err => { console.log(err); });
+
+      api.get('/api/conversations', {})
+        .then(res => { useUserStore().allConversations = res.data.data; })
+        .catch(err => { console.log(err); });
     })
     .catch(err => {
       console.log(err);
