@@ -144,8 +144,9 @@
 </template>
 
 <script setup>
-import { Cookies, Notify } from 'quasar';
+import { Notify } from 'quasar';
 import { api } from 'src/boot/axios';
+import { useUserStore } from 'src/stores/userStore';
 import { ref } from 'vue';
 
 const tab = ref('login');
@@ -164,7 +165,6 @@ const response = ref({});
 // 'Content-Type': 'application/x-www-form-urlencoded'
 
 const login = () => {
-  console.log(Cookies.get('JSESSIONID'));
   response.value = {};
   api.post('/api/auth/login', {
     username: loginUsername.value,
@@ -172,15 +172,35 @@ const login = () => {
   }, {
     withCredentials: true,
     headers: {
+      crossDomain: true,
       'Content-Type': 'application/x-www-form-urlencoded'
     }
   })
     .then(res => {
-      response.value = res.data;
+      if (res.request.responseURL.includes('error')) {
+        Notify.create({
+          message: 'Błędne dane logowania',
+          color: 'red-7',
+          timeout: 1500,
+          position: 'top-left'
+        });
+        return;
+      }
+
       Notify.create({
-        message: res.data.message,
-        color: res.data.success ? 'green-7' : 'red-7'
+        message: 'Poprawnie się zalogowałeś',
+        color: 'green-7',
+        timeout: 1500,
+        position: 'top-left'
       });
+
+      api.get('/api/auth/me', {})
+        .then(res => {
+          useUserStore().data = res.data.data;
+        })
+        .catch(err => {
+          console.log(err);
+        });
     })
     .catch(err => {
       console.log(err);

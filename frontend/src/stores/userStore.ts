@@ -4,22 +4,26 @@ import { ChatCompletion } from 'src/types/messageType';
 
 interface userStoreType {
   loading: boolean,
-  name: string,
-  surname: string,
-  role: string,
-  email: string,
-  phone: string,
+  data: {
+    name: string,
+    surname: string,
+    role: string,
+    email: string,
+    phone: string,
+  }
   currentConversation: {role: string, content: string}[]
 }
 
 export const useUserStore = defineStore('user', {
   state: () : userStoreType => ({
     loading: false,
-    name: '',
-    surname: '',
-    role: '',
-    email: '',
-    phone: '',
+    data: {
+      name: '',
+      surname: '',
+      role: '',
+      email: '',
+      phone: '',
+    },
     currentConversation: []
   }),
   actions: {
@@ -64,10 +68,10 @@ export const useUserStore = defineStore('user', {
         });
     },
     isUserLogged () {
-      return this.name.length <= 0;
+      return this.data.name.length > 0;
     },
     isUserAdmin () {
-      return this.role === 'ADMIN';
+      return this.data.role === 'ADMIN';
     }
   }
 });

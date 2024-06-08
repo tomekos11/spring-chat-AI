@@ -61,7 +61,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated()
             )
-            .formLogin(e -> e.permitAll().defaultSuccessUrl("/", false).loginProcessingUrl("/api/auth/login"));
+            .formLogin(e -> e.permitAll().loginProcessingUrl("/api/auth/login"));
         return http.build();
     }
 

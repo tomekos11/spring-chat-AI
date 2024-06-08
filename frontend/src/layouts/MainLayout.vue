@@ -1,35 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title>
-          AI Chat
-        </q-toolbar-title>
-        <q-btn
-          flat
-          dense
-          round
-          icon="person"
-          aria-label="Menu"
-          @click="openedDialog = true"
-        />
-      </q-toolbar>
-      <q-dialog v-model="openedDialog">
-        <login-register />
-      </q-dialog>
-    </q-header>
+    <Header />
 
     <q-drawer
-      v-model="leftDrawerOpen"
+      v-model="useActionsStore().isDrawerOpened"
       show-if-above
       bordered
     >
@@ -46,7 +20,7 @@
               dense
               round
               icon="close"
-              @click="leftDrawerOpen = false"
+              @click="useActionsStore().isDrawerOpened = false"
             />
           </div>
         </q-item-label>
@@ -68,17 +42,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import LoginRegister from 'components/LoginRegister.vue';
-const openedDialog = ref(false);
+import Header from 'components/Header.vue';
+import { useActionsStore } from 'src/stores/actionsStore';
 
 defineOptions({
   name: 'MainLayout'
 });
 
-const leftDrawerOpen = ref(false);
-
-function toggleLeftDrawer () {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-}
 </script>

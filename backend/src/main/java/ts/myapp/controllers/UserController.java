@@ -1,6 +1,7 @@
 package ts.myapp.controllers;
 
 import jakarta.validation.Valid;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -54,4 +55,20 @@ public class UserController {
         userRepository.save(newUser);
         return new ApiResponse<>(true, data, "Stworzono nowego użytkownika", null);
     }
+
+    @GetMapping("/api/auth/me")
+    public ApiResponse<User> me() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentUserName = authentication.getName();
+
+
+        User user = userRepository.findUserByUsername(currentUserName);
+
+//        Map<String, Object> data = new HashMap<>();
+//        JSONObject obj = new JSONObject().put("user", user);
+
+
+        return new ApiResponse<>(true, user, "Zwrócono dane użytkownika", null);
+    }
+
 }
