@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import { Notify } from 'quasar';
 import { api } from 'src/boot/axios';
 import { ChatCompletion } from 'src/types/messageType';
 import { getTimeNow } from 'src/utils/timeHelper';
@@ -77,17 +78,75 @@ export const useUserStore = defineStore('user', {
         ]
       };
     },
-    updateConversation () {
+    updateConversation (conversationId: number, newName: string) {
       api.patch('/api/conversations', {
-        conversationId: this.currentConversation.id,
-        name: this.currentConversation.name
+        conversationId,
+        name: newName
       })
         .then(res => {
-          console.log(res);
+          const foundIndex = this.allConversations.findIndex(el => el.id === res.data.data.id);
+          if (foundIndex !== -1) {
+            this.allConversations[foundIndex] = res.data.data;
+            Notify.create({
+              message: 'Poprawnie zaktualizowano konwersacje'
+            });
+          } else {
+            Notify.create({
+              message: 'Wystąpił błąd podczas aktualizacji konwersacji'
+            });
+          }
         })
         .catch(err => {
           console.error(err);
+          Notify.create({
+            message: 'Wystąpił błąd podczas aktualizacji konwersacji'
+          });
         });
+    },
+    deleteConversation (conversationId: number) {
+      const foundIndex = this.allConversations.findIndex(el => el.id === conversationId);
+      if (foundIndex !== -1) {
+        api.delete(`api/conversations/${conversationId.toString()}`)
+          .then(() => {
+            this.allConversations.splice(foundIndex, 1);
+            if (this.currentConversation.id === conversationId) this.startNewChat();
+            Notify.create({
+              message: 'Poprawnie usunięto konwersacje'
+            });
+          })
+          .catch(err => {
+            console.error(err);
+            Notify.create({
+              message: 'Błąd usuwania',
+              color: 'red-7'
+            });
+          });
+      }
+    },
+    shareConversation (conversationId: number, maintainAnonymity: boolean, expireDate: number[], usernames: string[]) {
+      const foundIndex = this.allConversations.findIndex(el => el.id === conversationId);
+      if (foundIndex !== -1) {
+        api.post('/api/share', {
+          conversationId,
+          maintainAnonymity,
+          date: getTimeNow(),
+          expireDate,
+          usernames
+        })
+          .then(() => {
+            console.log('shared');
+            Notify.create({
+              message: 'Poprawnie udostępniono konwersacje'
+            });
+          })
+          .catch(err => {
+            console.error(err);
+            Notify.create({
+              message: 'Błąd udostępniania',
+              color: 'red-7'
+            });
+          });
+      }
     },
     sendMessage (message: string) {
       this.loading = true;
@@ -143,6 +202,9 @@ export const useUserStore = defineStore('user', {
     },
     isUserAdmin () {
       return this.data.role === 'ADMIN';
+    },
+    findConversationById (conversationId: number) : Conversation | undefined {
+      return this.allConversations.find(el => el.id === conversationId);
     }
   }
 });

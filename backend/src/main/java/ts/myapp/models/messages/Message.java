@@ -31,7 +31,7 @@ public class Message {
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "conv_id")
-    private Conversation conv_id;
+    private Conversation conversation;
 
     @Column(name="date")
     private LocalDateTime date;
@@ -39,7 +39,7 @@ public class Message {
     public Message(String role, String content, Conversation conversation, LocalDateTime date) {
         this.role = role;
         this.content = content;
-        this.conv_id = conversation;
+        this.conversation = conversation;
         this.date = date;
     }
 

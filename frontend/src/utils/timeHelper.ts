@@ -3,7 +3,7 @@ export const getDate = (date: number[]) : string => {
 };
 
 export const getTime = (date: number[]) : string => {
-  return `${date[3] < 10 ? '0' : ''}${date[3]}:${date[4] < 10 ? '0' : ''}${date[4]}:${date[5] < 10 ? '0' : ''}${date[5]}`;
+  return `${date[3] < 10 ? '0' : ''}${date[3]}:${date[4] < 10 ? '0' : ''}${date[4]}`;
 };
 
 export const getTimeNow = () : number[] => {

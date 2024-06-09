@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ts.myapp.models.conversations.Conversation;
 import ts.myapp.models.messages.Message;
+import ts.myapp.models.shares.Share;
 import ts.myapp.models.users.User;
 
 import java.time.LocalDateTime;
@@ -32,14 +33,18 @@ public class Conversation {
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private User user_id;
+    private User user;
 
-    @OneToMany(mappedBy = "conv_id", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    hidden-relations
+    @OneToMany(mappedBy = "conversation", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Message> messages;
 
-    public Conversation(LocalDateTime begin_date, String name, User user_id, List<Message> messages) {
+    @OneToMany(mappedBy = "conversation", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Share> shares;
+
+    public Conversation(LocalDateTime begin_date, String name, User user, List<Message> messages) {
         this.begin_date = begin_date;
-        this.user_id = user_id;
+        this.user = user;
         this.messages = messages;
         this.name = name;
     }

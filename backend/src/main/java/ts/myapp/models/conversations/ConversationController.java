@@ -1,13 +1,16 @@
 package ts.myapp.models.conversations;
 
 import jakarta.validation.Valid;
+import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import ts.myapp.models.conversations.requests.ConversationCreateRequest;
 import ts.myapp.models.conversations.requests.ConversationPatchRequest;
 import ts.myapp.models.messages.Message;
+import ts.myapp.models.messages.MessageRepository;
 import ts.myapp.models.users.User;
 import ts.myapp.models.users.UserRepository;
 import ts.myapp.services.ApiResponse;
@@ -23,6 +26,8 @@ public class ConversationController {
 
     @Autowired
     private ConversationRepository conversationRepository;
+    @Autowired
+    private MessageRepository messageRepository;
 
     @GetMapping("/api/conversations")
     public ApiResponse<List<Conversation>> getConversations() {
@@ -71,7 +76,7 @@ public class ConversationController {
 
         // Znajdź konwersację
         Conversation conversation = conversationRepository.findConversationById(conversationUpdateRequest.getConversationId());
-        if (conversation == null || !conversation.getUser_id().getUsername().equals(currentUserName)) {
+        if (conversation == null || !conversation.getUser().getUsername().equals(currentUserName)) {
             return new ApiResponse<>(false, null, "Konwersacja nie istnieje lub nie należy do użytkownika", null);
         }
 
@@ -80,6 +85,34 @@ public class ConversationController {
         conversationRepository.save(conversation);
 
         return new ApiResponse<>(true, conversation, "Nazwa konwersacji została zaktualizowana", null);
+    }
+
+    @Transactional
+    @DeleteMapping("/api/conversations/{conversationId}")
+    public ApiResponse<Conversation> updateConversationName(@PathVariable Long conversationId) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentUserName = authentication.getName();
+
+        // Znajdź użytkownika
+        User user = userRepository.findUserByUsername(currentUserName);
+
+        if (user == null) {
+            return new ApiResponse<>(false, null, "Nie znaleziono użytkownika", null);
+        }
+
+        // Znajdź konwersację
+        Conversation conversation = conversationRepository.findById(conversationId).orElse(null);
+        if (conversation == null || !conversation.getUser().getUsername().equals(currentUserName)) {
+            return new ApiResponse<>(false, null, "Konwersacja nie istnieje lub nie należy do użytkownika", null);
+        }
+
+        // Usuń powiązane wiadomości
+        messageRepository.deleteByConversation(conversation);
+
+        // Zaktualizuj nazwę konwersacji
+        conversationRepository.delete(conversation);
+
+        return new ApiResponse<>(true, null, "Konwersacja została usunięta", null);
     }
 
 

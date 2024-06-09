@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import ts.myapp.models.conversations.Conversation;
 import ts.myapp.models.messages.Message;
+import ts.myapp.models.shares.SharesUsersPivot;
 
 import java.util.List;
 
@@ -43,10 +44,15 @@ public class User {
     @Column(name="phone")
     private String phone;
 
+//    hidden-relations
+
     @JsonIgnore
-    @OneToMany(mappedBy = "user_id", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    private List<Message> messages;
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Conversation> conversations;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<SharesUsersPivot> sharedToMe;
 
     public User(String username, String password, String role, String name, String surname, String email, String phone) {
         this.username = username;
