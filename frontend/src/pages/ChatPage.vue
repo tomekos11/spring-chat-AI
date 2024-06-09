@@ -43,6 +43,7 @@
                 dense
                 color="dark"
                 icon="save"
+                @click="useUserStore().saveConversation()"
               />
               <q-btn
                 flat

@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia';
 import { api } from 'src/boot/axios';
 import { ChatCompletion } from 'src/types/messageType';
+import { getTimeNow } from 'src/utils/timeHelper';
 
 interface Message {
   content: string,
@@ -12,12 +13,13 @@ interface Message {
 interface Conversation {
   begin_date: null | number[],
   id: number,
-  messages: Message[]
+  messages: Message[],
+  name?: string
 }
 
 interface userStoreType {
   loading: boolean,
-  wantToSartConversation: boolean,
+  wantToStartConversation: boolean,
   data: {
     name: string,
     surname: string,
@@ -32,7 +34,7 @@ interface userStoreType {
 export const useUserStore = defineStore('user', {
   state: () : userStoreType => ({
     loading: false,
-    wantToSartConversation: false,
+    wantToStartConversation: true,
     data: {
       name: '',
       surname: '',
@@ -42,13 +44,13 @@ export const useUserStore = defineStore('user', {
     },
     allConversations: [],
     currentConversation: {
-      begin_date: null,
+      begin_date: getTimeNow(),
       id: -1,
       messages: [
         {
           content: 'Witaj jestem botem z przyszłości. W czym mogę Ci dzisiaj pomóc?',
           role: 'assistant',
-          date: null
+          date: getTimeNow()
         }
       ]
     }
@@ -75,17 +77,29 @@ export const useUserStore = defineStore('user', {
         ]
       };
     },
+    updateConversation () {
+      api.patch('/api/conversations', {
+        conversationId: this.currentConversation.id,
+        name: this.currentConversation.name
+      })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    },
     sendMessage (message: string) {
       this.loading = true;
       this.currentConversation.messages.push({
-        date: this.getTimeNow(),
+        date: getTimeNow(),
         role: 'user',
         content: message
       });
       api.post('/api/ask', {
         messages: this.currentConversation.messages,
         conversationId: this.currentConversation.id === -1 ? null : this.currentConversation.id,
-        wantToStartConversation: true
+        wantToStartConversation: this.wantToStartConversation
       },
       {
         headers: {
@@ -94,12 +108,29 @@ export const useUserStore = defineStore('user', {
       })
         .then((res: { data : ChatCompletion }) => {
           this.currentConversation.messages.push(res.data.choices[0].message);
+          this.currentConversation.messages[this.currentConversation.messages.length - 1].date = getTimeNow();
+          if (res.data.conversation !== '') {
+            this.currentConversation.id = res.data.conversation.id;
+            this.currentConversation.name = res.data.conversation.title;
+            let foundConversation = this.allConversations.find(el => el.id === this.currentConversation.id);
+            if (foundConversation) {
+              foundConversation = this.currentConversation;
+            } else {
+              this.allConversations.push(this.currentConversation);
+            }
+          }
+
           this.loading = false;
         })
         .catch(err => {
           console.error(err);
           this.loading = false;
         });
+    },
+    saveConversation () {
+      api.post('/api/conversations', this.currentConversation)
+        .then(res => console.log(res))
+        .catch(err => console.error(err));
     },
     loadConversation (conversationId: number) {
       const found = this.allConversations.find(el => el.id === conversationId);
@@ -112,23 +143,6 @@ export const useUserStore = defineStore('user', {
     },
     isUserAdmin () {
       return this.data.role === 'ADMIN';
-    },
-    getDate (date: number[]): string {
-      return `${date[2] < 10 ? '0' : ''}${date[2]}-${date[1] < 10 ? '0' : ''}${date[1]}-${date[0]}`;
-    },
-    getTime (date: number[]): string {
-      return `${date[3] < 10 ? '0' : ''}${date[3]}:${date[4] < 10 ? '0' : ''}${date[4]}:${date[5] < 10 ? '0' : ''}${date[5]}`;
-    },
-    getTimeNow () : number[] {
-      const now = new Date();
-      const year = now.getFullYear();
-      const month = now.getMonth() + 1;
-      const day = now.getDate();
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const seconds = now.getSeconds();
-
-      return [year, month, day, hours, minutes, seconds];
     }
   }
 });

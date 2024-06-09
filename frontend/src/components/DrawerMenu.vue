@@ -35,16 +35,34 @@
           />
         </q-item-section>
         <q-item-section :class="conversation.id === useUserStore().currentConversation.id ? 'text-bold' :''">
-          Konwersacja nr {{ conversation.id }}
+          {{ conversation.name }}
+          <q-popup-edit
+            v-slot="scope"
+            v-model="conversation.name"
+            auto-save
+            @update:model-value="useUserStore().updateConversation()"
+          >
+            <q-input
+              v-model="scope.value"
+              dense
+              autofocus
+              counter
+              @keyup.enter="scope.set"
+            >
+              <template #append>
+                <q-icon name="edit" />
+              </template>
+            </q-input>
+          </q-popup-edit>
         </q-item-section>
         <q-item-label
           caption
           class="text-center"
         >
           <span class="text-primary text-bold">
-            {{ conversation.begin_date ? useUserStore().getTime(conversation.begin_date) : 'błąd' }}
+            {{ conversation.begin_date ? getTime(conversation.begin_date) : 'błąd' }}
           </span><br>
-          {{ conversation.begin_date ? useUserStore().getDate(conversation.begin_date) : 'błąd' }}
+          {{ conversation.begin_date ? getDate(conversation.begin_date) : 'błąd' }}
         </q-item-label>
       </q-item>
     </q-list>
@@ -54,5 +72,6 @@
 <script setup lang="ts">
 import { useActionsStore } from 'src/stores/actionsStore';
 import { useUserStore } from 'src/stores/userStore';
+import { getDate, getTime } from 'src/utils/timeHelper';
 
 </script>

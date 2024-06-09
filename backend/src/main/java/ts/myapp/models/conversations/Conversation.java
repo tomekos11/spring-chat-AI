@@ -26,6 +26,9 @@ public class Conversation {
     @Column(name="begin_date")
     private LocalDateTime begin_date;
 
+    @Column(name="name")
+    private String name;
+
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
@@ -34,10 +37,11 @@ public class Conversation {
     @OneToMany(mappedBy = "conv_id", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Message> messages;
 
-    public Conversation(LocalDateTime begin_date, User user_id, List<Message> messages) {
+    public Conversation(LocalDateTime begin_date, String name, User user_id, List<Message> messages) {
         this.begin_date = begin_date;
         this.user_id = user_id;
         this.messages = messages;
+        this.name = name;
     }
 
     public void addMessage(Message message) {

@@ -95,7 +95,7 @@ public class ChatController {
         System.out.println(requestMessages);
 
         // Sprawdzamy konwersacja już jest
-        Integer conversationId = request.getConversationId();
+        Long conversationId = request.getConversationId();
         boolean wantToStartConversation = request.isWantToStartConversation();
 
         System.out.println(conversationId);
@@ -105,13 +105,12 @@ public class ChatController {
         }
         else if (wantToStartConversation) {
             System.out.println("CHCEMY ZROBIC KONWERSACJE");
-            conversation = new Conversation(currentDate, user,  new ArrayList<>());
+            conversation = new Conversation(currentDate, "default", user,  new ArrayList<>());
             user.getConversations().add(conversation);
         }
 
         Message lastRequestMessage = requestMessages.get(requestMessages.size() - 1);
-        ts.myapp.models.messages.Message lastMessage =  new ts.myapp.models.messages.Message(lastRequestMessage.getRole(), lastRequestMessage.getContent(), conversation, lastRequestMessage.getDate());
-        conversation.addMessage(lastMessage);
+        ts.myapp.models.messages.Message lastHumanMessage =  new ts.myapp.models.messages.Message(lastRequestMessage.getRole(), lastRequestMessage.getContent(), conversation, lastRequestMessage.getDate());
 
         // Tworzymy nową listę wiadomości do przekazania do OpenAI
         JSONArray messages = new JSONArray();
@@ -155,18 +154,27 @@ public class ChatController {
         System.out.println(role);
 
         //Dodaj odpowiedź bota w nowej konwersacji
-        ts.myapp.models.messages.Message message = new ts.myapp.models.messages.Message(role, messageContent, conversation, currentDate);
-        conversation.addMessage(message);
+        ts.myapp.models.messages.Message botMessage = new ts.myapp.models.messages.Message(role, messageContent, conversation, currentDate);
 
         // Zapisz do bazy
         if (wantToStartConversation || conversationId != null) {
+            conversation.addMessage(lastHumanMessage);
+            conversation.addMessage(botMessage);
             conversationRepository.save(conversation);
+            JSONObject newConversationJSON = new JSONObject();
+            newConversationJSON.put("id", conversation.getId());
+            newConversationJSON.put("title", conversation.getName());
+            newConversationJSON.put("begin_date", conversation.getBegin_date());
+            jsonBotResponse.put("conversation", newConversationJSON);
+        } else {
+            // Dodaj do zwrotki info o id tej konwersacji
+            jsonBotResponse.put("conversation", "");
         }
 
         // Zwracamy odpowiedź od OpenAI
         return ResponseEntity
                 .ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(response.getBody());
+                .body(jsonBotResponse.toString());
     }
 }

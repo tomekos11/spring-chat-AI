@@ -4,11 +4,9 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ts.myapp.models.conversations.requests.ConversationCreateRequest;
+import ts.myapp.models.conversations.requests.ConversationPatchRequest;
 import ts.myapp.models.messages.Message;
 import ts.myapp.models.users.User;
 import ts.myapp.models.users.UserRepository;
@@ -23,6 +21,9 @@ public class ConversationController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private ConversationRepository conversationRepository;
+
     @GetMapping("/api/conversations")
     public ApiResponse<List<Conversation>> getConversations() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -36,7 +37,7 @@ public class ConversationController {
     }
 
     @PostMapping("/api/conversations")
-    public ApiResponse<List<Conversation>> createConversation(@Valid @RequestBody ConversationCreateRequest conversationCreateRequest) {
+    public ApiResponse<Conversation> createConversation(@Valid @RequestBody ConversationCreateRequest conversationCreateRequest) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentUserName = authentication.getName();
 
@@ -44,17 +45,42 @@ public class ConversationController {
 
         //Dodaj konwersacje
         User user = userRepository.findUserByUsername(currentUserName);
-        Conversation conversation = new Conversation(currentDate, user,  new ArrayList<>());
+        Conversation conversation = new Conversation(currentDate, "default", user,  new ArrayList<>());
 
         user.getConversations().add(conversation);
 
-        //Dodaj wiadomość w nowej konwersacji
-        Message message = new Message("user", conversationCreateRequest.getContent(), conversation, currentDate);
-        conversation.addMessage(message);
+        List<ts.myapp.models.users.requests.Message> requestMessages = conversationCreateRequest.getMessages();
+
+        for (ts.myapp.models.users.requests.Message requestMessage : requestMessages) {
+            Message message =  new Message(requestMessage.getRole(), requestMessage.getContent(), conversation, requestMessage.getDate());
+            conversation.addMessage(message);
+        }
 
         userRepository.save(user);
-        List<Conversation> conversations = user.getConversations();
 
-        return new ApiResponse<>(true, conversations, "Udało się stworzyć konwersacje", null);
+        return new ApiResponse<>(true, conversation, "Udało się stworzyć konwersacje", null);
     }
+
+    @PatchMapping("/api/conversations")
+    public ApiResponse<Conversation> updateConversationName(@Valid @RequestBody ConversationPatchRequest conversationUpdateRequest) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentUserName = authentication.getName();
+
+        // Znajdź użytkownika
+        User user = userRepository.findUserByUsername(currentUserName);
+
+        // Znajdź konwersację
+        Conversation conversation = conversationRepository.findConversationById(conversationUpdateRequest.getConversationId());
+        if (conversation == null || !conversation.getUser_id().getUsername().equals(currentUserName)) {
+            return new ApiResponse<>(false, null, "Konwersacja nie istnieje lub nie należy do użytkownika", null);
+        }
+
+        // Zaktualizuj nazwę konwersacji
+        conversation.setName(conversationUpdateRequest.getName());
+        conversationRepository.save(conversation);
+
+        return new ApiResponse<>(true, conversation, "Nazwa konwersacji została zaktualizowana", null);
+    }
+
+
 }

@@ -9,5 +9,5 @@ import ts.myapp.models.users.User;
 @Repository
 public interface ConversationRepository extends JpaRepository<Conversation, Long> {
     @Query("SELECT c FROM Conversation c WHERE c.id = :id")
-    Conversation findConversationById(@Param("id") int id);
+    Conversation findConversationById(@Param("id") long id);
 }

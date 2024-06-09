@@ -3,12 +3,15 @@ package ts.myapp.models.conversations.requests;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import ts.myapp.models.users.requests.Message;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 public class ConversationCreateRequest {
 
-    @NotNull(message = "Nie można wysłać pustego zapytania")
-    @Size(min = 2, max = 1000, message="Można wysłać minimalnie 1 znak i maksymalnie 1000")
-    public String content;
+    LocalDateTime date;
+    List<Message> messages;
 
 }

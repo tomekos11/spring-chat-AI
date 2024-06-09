@@ -12,6 +12,7 @@ interface ChatChoice {
 export interface ChatCompletion {
     id: string;
     object: string;
+    conversation: '' | { id: number, title: string, begin_date: number[]};
     created: number;
     model: string;
     choices: ChatChoice[];

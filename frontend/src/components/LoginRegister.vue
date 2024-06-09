@@ -233,6 +233,7 @@ const register = () => {
         message: res.data.message,
         color: res.data.success ? 'green-7' : 'red-7'
       });
+      tab.value = 'login';
     })
     .catch(err => {
       console.log(err);

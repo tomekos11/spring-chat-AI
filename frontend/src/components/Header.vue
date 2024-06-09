@@ -50,19 +50,29 @@
           <q-item-section>Logi</q-item-section>
         </q-item>
         <q-item
-          v-close-popup
           clickable
+          @click="useUserStore().wantToStartConversation = !useUserStore().wantToStartConversation"
         >
           <q-item-section avatar>
             <q-avatar
               rounded
-              color="green-9"
+              color="black"
               text-color="white"
               icon="save"
               size="md"
-            />
+            >
+              <q-badge
+                size="xs"
+                floating
+                rounded
+                dense
+                :color="!useUserStore().wantToStartConversation ? 'red-9' : 'green-9'"
+              />
+            </q-avatar>
           </q-item-section>
-          <q-item-section>Zapisz konwersacje</q-item-section>
+          <q-item-section>
+            {{ useUserStore().wantToStartConversation ? 'Zapis włączony' : 'Zapis wyłączony' }}
+          </q-item-section>
         </q-item>
         <q-item
           v-close-popup

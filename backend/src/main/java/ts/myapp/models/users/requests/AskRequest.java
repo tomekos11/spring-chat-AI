@@ -9,7 +9,7 @@ public class AskRequest {
     private List<Message> messages;
 
     @Nullable
-    private Integer conversationId;
+    private Long conversationId;
 
     private boolean wantToStartConversation;
 }
