@@ -4,34 +4,7 @@ import { api } from 'src/boot/axios';
 import { ChatCompletion } from 'src/types/messageType';
 import { getTimeNow } from 'src/utils/timeHelper';
 import { useActionsStore } from './actionsStore';
-
-interface Message {
-  content: string,
-  date: null | number[],
-  id?: number,
-  role: 'user' | 'assistant',
-}
-
-interface Conversation {
-  begin_date: null | number[],
-  id: number,
-  messages: Message[],
-  name?: string
-}
-
-interface userStoreType {
-  loading: boolean,
-  wantToStartConversation: boolean,
-  data: {
-    name: string,
-    surname: string,
-    role: string,
-    email: string,
-    phone: string,
-  },
-  allConversations: Conversation[],
-  currentConversation: Conversation
-}
+import { Conversation, userStoreType } from 'src/types/userStoreType';
 
 export const useUserStore = defineStore('user', {
   state: () : userStoreType => ({

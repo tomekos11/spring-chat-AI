@@ -3,10 +3,7 @@ package ts.myapp.models.shares;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ts.myapp.models.conversations.Conversation;
 import ts.myapp.models.conversations.ConversationRepository;
 import ts.myapp.models.shares.requests.ShareConversationRequest;
@@ -60,6 +57,19 @@ public class ShareController {
         
         shareRepository.save(share);
         return new ApiResponse<>(true, share, "Poprawnie udostępniono", null);
+    }
+    @GetMapping("/api/shares/{slug}")
+    public ApiResponse<Conversation> getConversationForSlug(@PathVariable String slug) {
+        Share share = shareRepository.findBySlug(slug);
+
+        if (share == null) {
+            return new ApiResponse<>(false, null, "Udostępnienie nie znalezione", null);
+        }
+//        TODO sprawdzic czy uzytkownik moze otwierac
+//        List<SharesUsersPivot> users = share.getUsers().stream().toList();
+
+        Conversation conversation = share.getConversation();
+        return new ApiResponse<>(true, conversation, "Konwersacja znaleziona", null);
     }
 
 }

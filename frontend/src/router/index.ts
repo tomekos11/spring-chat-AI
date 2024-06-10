@@ -32,5 +32,13 @@ export default route(function (/* { store, ssrContext } */) {
     history: createHistory(process.env.VUE_ROUTER_BASE),
   });
 
+  Router.beforeEach((to, from, next) => {
+    // Tutaj możesz dodać logikę, np. sprawdzanie autoryzacji
+    console.log(`Nawigacja do: ${to.path} z: ${from.path}`);
+
+    // Jeśli wszystko jest OK, wywołujemy next() bez parametrów
+    next();
+  });
+
   return Router;
 });

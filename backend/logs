@@ -7192,3 +7192,910 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer fou
 2024-06-10T03:56:37.388+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2024-06-10T03:56:37.388+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@6550b6b]
 2024-06-10T03:56:37.391+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T04:01:29.411+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/usernames", parameters={}
+2024-06-10T04:01:29.411+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#usernames()
+2024-06-10T04:01:29.414+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T04:01:29.414+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@416c671e]
+2024-06-10T04:01:29.415+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T04:01:56.403+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T04:01:56.403+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T04:01:56.406+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T04:01:56.406+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@45125f81]
+2024-06-10T04:01:56.407+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T04:01:56.414+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T04:01:56.414+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T04:01:56.415+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T04:01:56.415+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@6e06e7f4]
+2024-06-10T04:01:56.427+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T04:02:00.647+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/usernames", parameters={}
+2024-06-10T04:02:00.648+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#usernames()
+2024-06-10T04:02:00.652+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T04:02:00.652+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@1f112fad]
+2024-06-10T04:02:00.653+02:00 DEBUG 21520 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T04:05:31.403+02:00  INFO 21520 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T04:05:31.403+02:00  INFO 21520 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-10T04:05:31.414+02:00  INFO 21520 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-10T11:01:46.113+02:00  INFO 23348 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 23348 (C:\Users\tomek\Desktop\spring-chat-AI\backend\build\classes\java\main started by tomek in C:\Users\tomek\Desktop\spring-chat-AI\backend)
+2024-06-10T11:01:46.114+02:00  INFO 23348 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-10T11:01:46.988+02:00  INFO 23348 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10T11:01:47.130+02:00  INFO 23348 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 4 JPA repository interfaces.
+2024-06-10T11:01:47.618+02:00  INFO 23348 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-10T11:01:47.629+02:00  INFO 23348 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-10T11:01:47.629+02:00  INFO 23348 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10T11:01:47.690+02:00  INFO 23348 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-10T11:01:47.691+02:00  INFO 23348 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1425 ms
+2024-06-10T11:01:47.706+02:00 DEBUG 23348 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-10T11:01:47.706+02:00 DEBUG 23348 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-10T11:01:48.074+02:00  INFO 23348 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-10T11:01:48.158+02:00  INFO 23348 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.070s)
+2024-06-10T11:01:48.166+02:00  INFO 23348 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 5
+2024-06-10T11:01:48.169+02:00  INFO 23348 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-10T11:01:48.239+02:00  INFO 23348 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10T11:01:48.299+02:00  INFO 23348 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10T11:01:48.337+02:00  INFO 23348 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-10T11:01:48.609+02:00  INFO 23348 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10T11:01:48.633+02:00  INFO 23348 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-10T11:01:48.643+02:00  INFO 23348 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b10f60e
+2024-06-10T11:01:48.644+02:00  INFO 23348 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-10T11:01:48.667+02:00  WARN 23348 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-10T11:01:48.670+02:00  WARN 23348 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10T11:01:49.474+02:00  INFO 23348 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10T11:01:49.476+02:00  INFO 23348 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:01:49.662+02:00  INFO 23348 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-10T11:01:50.091+02:00  WARN 23348 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10T11:01:50.152+02:00 DEBUG 23348 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2024-06-10T11:01:50.189+02:00 DEBUG 23348 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-10T11:01:50.215+02:00 DEBUG 23348 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-10T11:01:50.242+02:00  INFO 23348 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-10T11:01:50.337+02:00  INFO 23348 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ca4763f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4529b266, org.springframework.security.web.context.SecurityContextHolderFilter@81da6a3, org.springframework.security.web.header.HeaderWriterFilter@64d691b2, org.springframework.web.filter.CorsFilter@5b3063b7, org.springframework.security.web.authentication.logout.LogoutFilter@5e05874c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e2ab1f4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@63fa7643, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6aca85da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fe275d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@370d49d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15200332, org.springframework.security.web.access.ExceptionTranslationFilter@5e9650d3, org.springframework.security.web.access.intercept.AuthorizationFilter@68603829]
+2024-06-10T11:01:50.845+02:00  INFO 23348 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-10T11:01:50.851+02:00  INFO 23348 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 5.044 seconds (process running for 5.611)
+2024-06-10T11:06:20.080+02:00  INFO 23348 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10T11:06:20.081+02:00  INFO 23348 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-10T11:06:20.081+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-10T11:06:20.081+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-10T11:06:20.081+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-10T11:06:20.083+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@12b79055
+2024-06-10T11:06:20.083+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@412b4aed
+2024-06-10T11:06:20.083+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-10T11:06:20.083+02:00  INFO 23348 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-10T11:06:20.109+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:06:20.110+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:06:20.189+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:06:20.190+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@30f62f9c]
+2024-06-10T11:06:20.196+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:06:28.394+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={masked}
+2024-06-10T11:06:28.395+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.Controller#home()
+2024-06-10T11:06:28.395+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-10T11:06:28.396+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<html><body>Odpowiedź serwera dla adresu: http://localhost:8080 </br><h1>@GetMapping("/")</h1></body (truncated)..."]
+2024-06-10T11:06:28.397+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:06:28.405+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:06:28.405+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:06:28.406+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:06:28.406+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:06:28.410+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:06:28.410+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:06:28.410+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@709b2599]
+2024-06-10T11:06:28.410+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@43096e39]
+2024-06-10T11:06:28.416+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:06:28.462+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:06:36.569+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:06:36.570+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:06:36.572+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:06:36.572+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@62423da2]
+2024-06-10T11:06:36.573+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:06:36.582+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:06:36.582+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:06:36.584+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:06:36.584+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@9b6616]
+2024-06-10T11:06:36.596+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:08:32.884+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:08:32.884+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:08:32.888+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:08:32.888+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@1e8ca5e9]
+2024-06-10T11:08:32.889+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:08:32.896+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:08:32.896+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:08:32.900+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:08:32.900+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@1d25d015]
+2024-06-10T11:08:32.911+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:10:20.788+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:10:20.789+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:10:20.791+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:10:20.791+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@364d474e]
+2024-06-10T11:10:20.792+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:10:20.799+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:10:20.799+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:10:20.802+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:10:20.802+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@36f3cce2]
+2024-06-10T11:10:20.812+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:10:25.656+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:10:25.656+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:10:25.660+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:10:25.660+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@603a5233]
+2024-06-10T11:10:25.661+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:10:25.676+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:10:25.676+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:10:25.679+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:10:25.679+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@20a01abe]
+2024-06-10T11:10:25.687+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:10:44.900+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/12345678", parameters={}
+2024-06-10T11:10:44.900+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:10:44.900+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:10:44.901+02:00  WARN 23348 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /api/shares/12345678
+2024-06-10T11:10:44.903+02:00  WARN 23348 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No endpoint GET /api/shares/12345678.
+2024-06-10T11:10:44.903+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/shares/12345678.]
+2024-06-10T11:10:44.903+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-06-10T11:10:44.903+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:10:44.903+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@6c7b7adc]
+2024-06-10T11:10:44.904+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:10:44.911+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-06-10T11:10:44.911+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-10T11:10:44.912+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:10:44.912+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:10:44.914+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:10:44.914+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@44761736]
+2024-06-10T11:10:44.917+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:10:44.917+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Jun 10 11:10:44 CEST 2024, status=404, error=Not Found, message=No endpoint GET /api/ (truncated)...]
+2024-06-10T11:10:44.922+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:10:44.923+02:00 DEBUG 23348 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-06-10T11:20:57.249+02:00  INFO 23348 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:20:57.251+02:00  INFO 23348 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-10T11:20:57.253+02:00  INFO 23348 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-10T11:21:07.569+02:00  INFO 5932 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 5932 (C:\Users\tomek\Desktop\spring-chat-AI\backend\build\classes\java\main started by tomek in C:\Users\tomek\Desktop\spring-chat-AI\backend)
+2024-06-10T11:21:07.571+02:00  INFO 5932 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-10T11:21:08.329+02:00  INFO 5932 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10T11:21:08.437+02:00  INFO 5932 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 4 JPA repository interfaces.
+2024-06-10T11:21:08.828+02:00  INFO 5932 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-10T11:21:08.836+02:00  INFO 5932 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-10T11:21:08.836+02:00  INFO 5932 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10T11:21:08.880+02:00  INFO 5932 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-10T11:21:08.880+02:00  INFO 5932 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1144 ms
+2024-06-10T11:21:08.892+02:00 DEBUG 5932 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-10T11:21:08.892+02:00 DEBUG 5932 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-10T11:21:09.209+02:00  INFO 5932 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-10T11:21:09.260+02:00  INFO 5932 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.038s)
+2024-06-10T11:21:09.268+02:00  INFO 5932 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 5
+2024-06-10T11:21:09.270+02:00  INFO 5932 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-10T11:21:09.330+02:00  INFO 5932 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10T11:21:09.391+02:00  INFO 5932 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10T11:21:09.416+02:00  INFO 5932 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-10T11:21:09.641+02:00  INFO 5932 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10T11:21:09.661+02:00  INFO 5932 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-10T11:21:09.671+02:00  INFO 5932 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75063bd0
+2024-06-10T11:21:09.672+02:00  INFO 5932 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-10T11:21:09.691+02:00  WARN 5932 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-10T11:21:09.694+02:00  WARN 5932 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10T11:21:10.407+02:00  INFO 5932 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10T11:21:10.409+02:00  INFO 5932 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:21:10.570+02:00  INFO 5932 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-10T11:21:10.961+02:00  WARN 5932 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10T11:21:11.012+02:00 DEBUG 5932 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2024-06-10T11:21:11.046+02:00 DEBUG 5932 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-10T11:21:11.069+02:00 DEBUG 5932 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-10T11:21:11.095+02:00  INFO 5932 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-10T11:21:11.162+02:00  INFO 5932 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3bd69a51, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36f329e7, org.springframework.security.web.context.SecurityContextHolderFilter@53a52b3f, org.springframework.security.web.header.HeaderWriterFilter@4a115c4c, org.springframework.web.filter.CorsFilter@7a11426a, org.springframework.security.web.authentication.logout.LogoutFilter@62fef807, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5e05874c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@64d691b2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@69c70b62, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@301af154, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@310ad792, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@664c0019, org.springframework.security.web.access.ExceptionTranslationFilter@1de618b3, org.springframework.security.web.access.intercept.AuthorizationFilter@22523986]
+2024-06-10T11:21:11.569+02:00  INFO 5932 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-10T11:21:11.575+02:00  INFO 5932 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.298 seconds (process running for 5.18)
+2024-06-10T11:21:18.023+02:00  INFO 5932 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10T11:21:18.024+02:00  INFO 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-10T11:21:18.024+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-10T11:21:18.024+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-10T11:21:18.024+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-10T11:21:18.025+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@33093469
+2024-06-10T11:21:18.025+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@78f3ce56
+2024-06-10T11:21:18.025+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-10T11:21:18.025+02:00  INFO 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-10T11:21:18.056+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:21:18.057+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:21:18.071+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/logout", parameters={}
+2024-06-10T11:21:18.071+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#logout(HttpServletRequest, HttpServletResponse)
+2024-06-10T11:21:18.080+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:21:18.081+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@115af6a7]
+2024-06-10T11:21:18.087+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:21:18.146+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:21:18.146+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@587b75f4]
+2024-06-10T11:21:18.147+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:21:21.402+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:21:21.403+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:21:21.409+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:21:21.409+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@7b969163]
+2024-06-10T11:21:21.410+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:21:21.415+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/logout", parameters={}
+2024-06-10T11:21:21.415+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#logout(HttpServletRequest, HttpServletResponse)
+2024-06-10T11:21:21.416+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:21:21.416+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@7c3d4139]
+2024-06-10T11:21:21.417+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:24:18.669+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:24:18.670+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:24:18.673+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:24:18.674+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@4a231428]
+2024-06-10T11:24:18.675+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:24:18.681+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/logout", parameters={}
+2024-06-10T11:24:18.681+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#logout(HttpServletRequest, HttpServletResponse)
+2024-06-10T11:24:18.682+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:24:18.682+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@6b8f0c48]
+2024-06-10T11:24:18.682+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:24:48.130+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:24:48.130+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:24:48.133+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:24:48.133+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@6859a5e]
+2024-06-10T11:24:48.134+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:24:48.141+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/logout", parameters={}
+2024-06-10T11:24:48.142+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#logout(HttpServletRequest, HttpServletResponse)
+2024-06-10T11:24:48.142+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:24:48.142+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@4a7cdb10]
+2024-06-10T11:24:48.143+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:26:00.192+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:26:00.192+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:26:00.195+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:26:00.195+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@41b9cb53]
+2024-06-10T11:26:00.195+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:26:00.202+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/logout", parameters={}
+2024-06-10T11:26:00.202+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#logout(HttpServletRequest, HttpServletResponse)
+2024-06-10T11:26:00.203+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:26:00.203+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@2f6a7d81]
+2024-06-10T11:26:00.203+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:26:04.087+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:26:04.087+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:26:04.090+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:26:04.090+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@8df2354]
+2024-06-10T11:26:04.091+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:26:04.095+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/logout", parameters={}
+2024-06-10T11:26:04.096+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#logout(HttpServletRequest, HttpServletResponse)
+2024-06-10T11:26:04.096+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:26:04.096+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@2b4c32f4]
+2024-06-10T11:26:04.097+02:00 DEBUG 5932 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:27:15.525+02:00  INFO 5932 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:27:15.528+02:00  INFO 5932 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-10T11:27:15.530+02:00  INFO 5932 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-10T11:27:18.643+02:00  INFO 18192 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 18192 (C:\Users\tomek\Desktop\spring-chat-AI\backend\build\classes\java\main started by tomek in C:\Users\tomek\Desktop\spring-chat-AI\backend)
+2024-06-10T11:27:18.644+02:00  INFO 18192 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-10T11:27:19.279+02:00  INFO 18192 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10T11:27:19.387+02:00  INFO 18192 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 4 JPA repository interfaces.
+2024-06-10T11:27:19.814+02:00  INFO 18192 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-10T11:27:19.823+02:00  INFO 18192 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-10T11:27:19.823+02:00  INFO 18192 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10T11:27:19.867+02:00  INFO 18192 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-10T11:27:19.868+02:00  INFO 18192 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1077 ms
+2024-06-10T11:27:19.881+02:00 DEBUG 18192 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-10T11:27:19.881+02:00 DEBUG 18192 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-10T11:27:20.199+02:00  INFO 18192 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-10T11:27:20.232+02:00  INFO 18192 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.019s)
+2024-06-10T11:27:20.240+02:00  INFO 18192 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 5
+2024-06-10T11:27:20.242+02:00  INFO 18192 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-10T11:27:20.299+02:00  INFO 18192 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10T11:27:20.339+02:00  INFO 18192 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10T11:27:20.364+02:00  INFO 18192 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-10T11:27:20.590+02:00  INFO 18192 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10T11:27:20.609+02:00  INFO 18192 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-10T11:27:20.618+02:00  INFO 18192 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64d53f0d
+2024-06-10T11:27:20.619+02:00  INFO 18192 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-10T11:27:20.637+02:00  WARN 18192 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-10T11:27:20.640+02:00  WARN 18192 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10T11:27:21.378+02:00  INFO 18192 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10T11:27:21.380+02:00  INFO 18192 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:27:21.548+02:00  INFO 18192 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-10T11:27:21.931+02:00  WARN 18192 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10T11:27:21.982+02:00 DEBUG 18192 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2024-06-10T11:27:22.015+02:00 DEBUG 18192 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-10T11:27:22.039+02:00 DEBUG 18192 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-10T11:27:22.064+02:00  INFO 18192 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-10T11:27:22.134+02:00  INFO 18192 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e11d059, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62c4ad40, org.springframework.security.web.context.SecurityContextHolderFilter@5d7a274e, org.springframework.security.web.header.HeaderWriterFilter@581cd446, org.springframework.web.filter.CorsFilter@19bd1f98, org.springframework.security.web.authentication.logout.LogoutFilter@664c0019, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@15200332, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@40a2cae4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@9bc10bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5622e162, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f8589b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69cf9acb, org.springframework.security.web.access.ExceptionTranslationFilter@52c0c594, org.springframework.security.web.access.intercept.AuthorizationFilter@6aca85da]
+2024-06-10T11:27:22.527+02:00  INFO 18192 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-10T11:27:22.533+02:00  INFO 18192 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.178 seconds (process running for 4.621)
+2024-06-10T11:27:25.580+02:00  INFO 18192 --- [backend] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10T11:27:25.580+02:00  INFO 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-10T11:27:25.580+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-10T11:27:25.580+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-10T11:27:25.581+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-10T11:27:25.582+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@11caa21d
+2024-06-10T11:27:25.582+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3d118651
+2024-06-10T11:27:25.582+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-10T11:27:25.583+02:00  INFO 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-06-10T11:27:25.615+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/12345678", parameters={}
+2024-06-10T11:27:25.615+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:27:25.617+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:27:25.617+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:27:25.695+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:27:25.695+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:27:25.696+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@3efbe1da]
+2024-06-10T11:27:25.696+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@6c835734]
+2024-06-10T11:27:25.702+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:27:25.702+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:28:24.891+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:28:24.891+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:28:24.892+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:28:24.892+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:28:24.895+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:28:24.895+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@792527a]
+2024-06-10T11:28:24.896+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:28:24.914+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:28:24.914+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@1a031965]
+2024-06-10T11:28:24.959+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor]
+2024-06-10T11:28:24.960+02:00 ERROR 18192 --- [backend] [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor]] with root cause
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: ts.myapp.services.ApiResponse["data"]->ts.myapp.models.conversations.Conversation$HibernateProxy$WNF3wj4v["hibernateLazyInitializer"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1330) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:414) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:53) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:30) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:502) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:341) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1574) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061) ~[jackson-databind-2.17.1.jar:2.17.1]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:483) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:114) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:297) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:192) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:189) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:175) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2024-06-10T11:28:24.987+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/logout", parameters={}
+2024-06-10T11:28:24.989+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#logout(HttpServletRequest, HttpServletResponse)
+2024-06-10T11:28:24.991+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:28:24.992+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@35faeffc]
+2024-06-10T11:28:24.992+02:00 DEBUG 18192 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:29:44.514+02:00  INFO 18192 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:29:44.515+02:00  INFO 18192 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-10T11:29:44.517+02:00  INFO 18192 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-10T11:29:48.191+02:00  INFO 3780 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 3780 (C:\Users\tomek\Desktop\spring-chat-AI\backend\build\classes\java\main started by tomek in C:\Users\tomek\Desktop\spring-chat-AI\backend)
+2024-06-10T11:29:48.193+02:00  INFO 3780 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-10T11:29:48.836+02:00  INFO 3780 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10T11:29:48.947+02:00  INFO 3780 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 4 JPA repository interfaces.
+2024-06-10T11:29:49.374+02:00  INFO 3780 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-10T11:29:49.389+02:00  INFO 3780 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-10T11:29:49.389+02:00  INFO 3780 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10T11:29:49.441+02:00  INFO 3780 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-10T11:29:49.442+02:00  INFO 3780 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1100 ms
+2024-06-10T11:29:49.457+02:00 DEBUG 3780 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-10T11:29:49.457+02:00 DEBUG 3780 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-10T11:29:49.781+02:00  INFO 3780 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-10T11:29:49.814+02:00  INFO 3780 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.020s)
+2024-06-10T11:29:49.822+02:00  INFO 3780 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 5
+2024-06-10T11:29:49.824+02:00  INFO 3780 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-10T11:29:49.884+02:00  INFO 3780 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10T11:29:49.926+02:00  INFO 3780 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10T11:29:49.951+02:00  INFO 3780 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-10T11:29:50.190+02:00  INFO 3780 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10T11:29:50.210+02:00  INFO 3780 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-10T11:29:50.219+02:00  INFO 3780 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@652a1a17
+2024-06-10T11:29:50.221+02:00  INFO 3780 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-10T11:29:50.239+02:00  WARN 3780 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-10T11:29:50.242+02:00  WARN 3780 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10T11:29:51.011+02:00  INFO 3780 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10T11:29:51.013+02:00  INFO 3780 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:29:51.188+02:00  INFO 3780 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-10T11:29:51.770+02:00  WARN 3780 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10T11:29:51.850+02:00 DEBUG 3780 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2024-06-10T11:29:51.901+02:00 DEBUG 3780 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-10T11:29:51.938+02:00 DEBUG 3780 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-10T11:29:51.974+02:00  INFO 3780 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-10T11:29:52.081+02:00  INFO 3780 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39d666e0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56d3e4a9, org.springframework.security.web.context.SecurityContextHolderFilter@40a2cae4, org.springframework.security.web.header.HeaderWriterFilter@e156110, org.springframework.web.filter.CorsFilter@56bc8c45, org.springframework.security.web.authentication.logout.LogoutFilter@4529b266, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e26841f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@224bff6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2542d320, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d5b1446, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ed3f72a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f29400e, org.springframework.security.web.access.ExceptionTranslationFilter@7f8589b1, org.springframework.security.web.access.intercept.AuthorizationFilter@69cf9acb]
+2024-06-10T11:29:52.642+02:00  INFO 3780 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-10T11:29:52.652+02:00  INFO 3780 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.749 seconds (process running for 5.171)
+2024-06-10T11:29:56.368+02:00  INFO 3780 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10T11:29:56.368+02:00  INFO 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-10T11:29:56.368+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-10T11:29:56.368+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-10T11:29:56.368+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-10T11:29:56.369+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bbc6496
+2024-06-10T11:29:56.369+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7f2c0470
+2024-06-10T11:29:56.369+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-10T11:29:56.369+02:00  INFO 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-10T11:29:56.403+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:29:56.403+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:29:56.405+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:29:56.405+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:29:56.483+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:29:56.484+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@31bb7955]
+2024-06-10T11:29:56.491+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:29:56.495+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:29:56.496+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@5fe8cb45]
+2024-06-10T11:29:56.539+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:32:47.197+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:32:47.198+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:32:47.202+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:32:47.203+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@5a9b3aca]
+2024-06-10T11:32:47.220+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:34:27.137+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:34:27.137+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:34:27.137+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:34:27.137+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:34:27.140+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:34:27.140+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@64b6d3d6]
+2024-06-10T11:34:27.140+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:34:27.140+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@2ae8b3e1]
+2024-06-10T11:34:27.142+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:34:27.156+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:36:00.645+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:36:00.645+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:36:00.646+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:36:00.646+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:36:00.649+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:36:00.650+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:36:00.650+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@29d976c3]
+2024-06-10T11:36:00.650+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@18fd7ec5]
+2024-06-10T11:36:00.650+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:36:00.664+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:37:20.813+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:37:20.813+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:37:20.816+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:37:20.816+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@3f7d6bc8]
+2024-06-10T11:37:20.826+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:37:22.829+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:37:22.829+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:37:22.831+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:37:22.831+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:37:22.832+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:37:22.834+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@542e2a85]
+2024-06-10T11:37:22.834+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:37:22.834+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@7edc6921]
+2024-06-10T11:37:22.835+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:37:22.845+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:37:23.608+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:37:23.608+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:37:23.608+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:37:23.608+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:37:23.612+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:37:23.612+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@52a7f156]
+2024-06-10T11:37:23.612+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:37:23.612+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@32f51a39]
+2024-06-10T11:37:23.613+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:37:23.626+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:37:42.597+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:37:42.597+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:37:42.597+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:37:42.597+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:37:42.600+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:37:42.600+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:37:42.601+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@4992c99]
+2024-06-10T11:37:42.601+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@2820ed53]
+2024-06-10T11:37:42.601+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:37:42.612+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:39:35.371+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:39:35.371+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:39:35.372+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:39:35.372+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:39:35.375+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:39:35.376+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:39:35.376+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@54b17ff]
+2024-06-10T11:39:35.376+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@5a0886d2]
+2024-06-10T11:39:35.376+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:39:35.390+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:42:35.046+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:42:35.046+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:42:35.047+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:42:35.047+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:42:35.050+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:42:35.050+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:42:35.050+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@47755f6c]
+2024-06-10T11:42:35.050+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@15ba6cec]
+2024-06-10T11:42:35.051+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:42:35.062+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:42:54.272+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:42:54.272+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:42:54.272+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:42:54.272+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:42:54.275+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:42:54.275+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:42:54.275+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@6dc1dd4a]
+2024-06-10T11:42:54.275+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@4a620156]
+2024-06-10T11:42:54.276+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:42:54.285+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:42:59.708+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:42:59.708+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:42:59.708+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:42:59.708+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:42:59.711+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:42:59.711+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:42:59.711+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@470ccd66]
+2024-06-10T11:42:59.711+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@2abc9a9d]
+2024-06-10T11:42:59.712+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:42:59.721+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:22.280+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:43:22.280+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:43:22.281+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:43:22.281+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:43:22.283+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:22.283+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:22.283+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@290ec207]
+2024-06-10T11:43:22.283+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@25a6b7c9]
+2024-06-10T11:43:22.284+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:22.295+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:22.911+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:43:22.911+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:43:22.911+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:43:22.911+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:43:22.914+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:22.914+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:22.915+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@31d137c6]
+2024-06-10T11:43:22.915+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@107b7395]
+2024-06-10T11:43:22.915+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:22.923+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:23.342+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:43:23.342+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:43:23.343+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:43:23.343+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:43:23.345+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:23.345+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:23.345+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@4f68caf3]
+2024-06-10T11:43:23.345+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@4cf0ff33]
+2024-06-10T11:43:23.345+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:23.353+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:23.695+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:43:23.695+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:43:23.696+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:43:23.696+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:43:23.697+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:23.698+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@210246fd]
+2024-06-10T11:43:23.698+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:23.698+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@4689a611]
+2024-06-10T11:43:23.698+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:23.707+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:26.953+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:43:26.953+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:43:26.955+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:26.955+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@28e1035b]
+2024-06-10T11:43:26.956+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:31.435+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:43:31.435+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:43:31.435+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:43:31.435+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:43:31.437+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:31.437+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:43:31.437+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@7a28606]
+2024-06-10T11:43:31.437+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@6dc6f56c]
+2024-06-10T11:43:31.438+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:43:31.446+02:00 DEBUG 3780 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:47:29.651+02:00  INFO 3780 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:47:29.653+02:00  INFO 3780 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-10T11:47:29.655+02:00  INFO 3780 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-10T11:47:38.155+02:00  INFO 22640 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 22640 (C:\Users\tomek\Desktop\spring-chat-AI\backend\build\classes\java\main started by tomek in C:\Users\tomek\Desktop\spring-chat-AI\backend)
+2024-06-10T11:47:38.157+02:00  INFO 22640 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-10T11:47:38.877+02:00  INFO 22640 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10T11:47:38.985+02:00  INFO 22640 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces.
+2024-06-10T11:47:39.401+02:00  INFO 22640 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-10T11:47:39.410+02:00  INFO 22640 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-10T11:47:39.410+02:00  INFO 22640 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10T11:47:39.465+02:00  INFO 22640 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-10T11:47:39.465+02:00  INFO 22640 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1161 ms
+2024-06-10T11:47:39.479+02:00 DEBUG 22640 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-10T11:47:39.479+02:00 DEBUG 22640 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-10T11:47:39.800+02:00  INFO 22640 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-10T11:47:39.847+02:00  INFO 22640 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.034s)
+2024-06-10T11:47:39.856+02:00  INFO 22640 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 5
+2024-06-10T11:47:39.857+02:00  INFO 22640 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-10T11:47:39.916+02:00  INFO 22640 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10T11:47:39.956+02:00  INFO 22640 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10T11:47:39.980+02:00  INFO 22640 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-10T11:47:40.206+02:00  INFO 22640 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10T11:47:40.225+02:00  INFO 22640 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-10T11:47:40.235+02:00  INFO 22640 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1760e688
+2024-06-10T11:47:40.236+02:00  INFO 22640 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-10T11:47:40.255+02:00  WARN 22640 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-10T11:47:40.257+02:00  WARN 22640 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10T11:47:40.998+02:00  INFO 22640 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10T11:47:41.000+02:00  INFO 22640 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:47:41.171+02:00  INFO 22640 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-10T11:47:41.590+02:00  WARN 22640 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10T11:47:41.645+02:00 DEBUG 22640 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2024-06-10T11:47:41.680+02:00 DEBUG 22640 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-10T11:47:41.704+02:00 DEBUG 22640 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-10T11:47:41.727+02:00  INFO 22640 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-10T11:47:41.797+02:00  INFO 22640 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36f329e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a11426a, org.springframework.security.web.context.SecurityContextHolderFilter@1396ee3b, org.springframework.security.web.header.HeaderWriterFilter@55feda3f, org.springframework.web.filter.CorsFilter@69c70b62, org.springframework.security.web.authentication.logout.LogoutFilter@40a2cae4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5dca1c50, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6074f8f9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@664c0019, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b8cf10f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15c900be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@495fa126, org.springframework.security.web.access.ExceptionTranslationFilter@3473e1bb, org.springframework.security.web.access.intercept.AuthorizationFilter@5e05874c]
+2024-06-10T11:47:42.220+02:00  INFO 22640 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-10T11:47:42.227+02:00  INFO 22640 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.377 seconds (process running for 5.252)
+2024-06-10T11:47:44.139+02:00  INFO 22640 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10T11:47:44.139+02:00  INFO 22640 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-10T11:47:44.139+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-10T11:47:44.139+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-10T11:47:44.139+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-10T11:47:44.139+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4967fabe
+2024-06-10T11:47:44.141+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2df491be
+2024-06-10T11:47:44.141+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-10T11:47:44.141+02:00  INFO 22640 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-10T11:47:44.169+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:47:44.169+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:47:44.171+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:47:44.171+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:47:44.244+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:47:44.245+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@223be9f]
+2024-06-10T11:47:44.252+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:47:44.255+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:47:44.255+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@56b4c52]
+2024-06-10T11:47:44.264+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:47:49.979+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:47:49.979+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:47:49.979+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:47:49.979+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:47:49.983+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:47:49.983+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:47:49.983+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@5335d14c]
+2024-06-10T11:47:49.983+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@2ff15064]
+2024-06-10T11:47:49.983+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:47:49.985+02:00 DEBUG 22640 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:48:33.233+02:00  INFO 22640 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:48:33.236+02:00  INFO 22640 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-10T11:48:33.238+02:00  INFO 22640 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-10T11:48:35.869+02:00  INFO 1804 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 1804 (C:\Users\tomek\Desktop\spring-chat-AI\backend\build\classes\java\main started by tomek in C:\Users\tomek\Desktop\spring-chat-AI\backend)
+2024-06-10T11:48:35.871+02:00  INFO 1804 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-10T11:48:36.512+02:00  INFO 1804 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10T11:48:36.621+02:00  INFO 1804 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces.
+2024-06-10T11:48:37.071+02:00  INFO 1804 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-10T11:48:37.080+02:00  INFO 1804 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-10T11:48:37.081+02:00  INFO 1804 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10T11:48:37.126+02:00  INFO 1804 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-10T11:48:37.126+02:00  INFO 1804 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
+2024-06-10T11:48:37.140+02:00 DEBUG 1804 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-10T11:48:37.140+02:00 DEBUG 1804 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-10T11:48:37.467+02:00  INFO 1804 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-10T11:48:37.499+02:00  INFO 1804 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.019s)
+2024-06-10T11:48:37.508+02:00  INFO 1804 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 5
+2024-06-10T11:48:37.511+02:00  INFO 1804 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-10T11:48:37.569+02:00  INFO 1804 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10T11:48:37.608+02:00  INFO 1804 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10T11:48:37.632+02:00  INFO 1804 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-10T11:48:37.855+02:00  INFO 1804 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10T11:48:37.873+02:00  INFO 1804 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-10T11:48:37.882+02:00  INFO 1804 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20b67366
+2024-06-10T11:48:37.884+02:00  INFO 1804 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-10T11:48:37.902+02:00  WARN 1804 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-10T11:48:37.905+02:00  WARN 1804 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10T11:48:38.641+02:00  INFO 1804 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10T11:48:38.643+02:00  INFO 1804 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:48:38.810+02:00  INFO 1804 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-10T11:48:39.199+02:00  WARN 1804 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10T11:48:39.251+02:00 DEBUG 1804 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2024-06-10T11:48:39.284+02:00 DEBUG 1804 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-10T11:48:39.307+02:00 DEBUG 1804 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-10T11:48:39.330+02:00  INFO 1804 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-10T11:48:39.398+02:00  INFO 1804 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69cf9acb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e26841f, org.springframework.security.web.context.SecurityContextHolderFilter@7f8589b1, org.springframework.security.web.header.HeaderWriterFilter@63fa7643, org.springframework.web.filter.CorsFilter@5f160f9c, org.springframework.security.web.authentication.logout.LogoutFilter@6e2ab1f4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e11d059, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3ed3f72a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@36c6d53b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e156110, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62fef807, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@234a08ea, org.springframework.security.web.access.ExceptionTranslationFilter@64a552, org.springframework.security.web.access.intercept.AuthorizationFilter@7b3d759f]
+2024-06-10T11:48:39.798+02:00  INFO 1804 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-10T11:48:39.804+02:00  INFO 1804 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.223 seconds (process running for 4.652)
+2024-06-10T11:48:44.002+02:00  INFO 1804 --- [backend] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10T11:48:44.002+02:00  INFO 1804 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-10T11:48:44.002+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-10T11:48:44.003+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-10T11:48:44.003+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-10T11:48:44.004+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7f2c0470
+2024-06-10T11:48:44.004+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@56e32a23
+2024-06-10T11:48:44.004+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-10T11:48:44.004+02:00  INFO 1804 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-10T11:48:44.037+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:48:44.037+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:48:44.038+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:48:44.039+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:48:44.117+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:48:44.118+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@5654e5bf]
+2024-06-10T11:48:44.124+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:48:44.132+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:48:44.132+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@401978dc]
+2024-06-10T11:48:44.135+02:00 DEBUG 1804 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:50:53.203+02:00  INFO 1804 --- [backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:50:53.206+02:00  INFO 1804 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-10T11:50:53.208+02:00  INFO 1804 --- [backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-10T11:50:55.933+02:00  INFO 18680 --- [backend] [main] ts.myapp.MyappApplication                : Starting MyappApplication using Java 22.0.1 with PID 18680 (C:\Users\tomek\Desktop\spring-chat-AI\backend\build\classes\java\main started by tomek in C:\Users\tomek\Desktop\spring-chat-AI\backend)
+2024-06-10T11:50:55.935+02:00  INFO 18680 --- [backend] [main] ts.myapp.MyappApplication                : No active profile set, falling back to 1 default profile: "default"
+2024-06-10T11:50:56.584+02:00  INFO 18680 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10T11:50:56.690+02:00  INFO 18680 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 4 JPA repository interfaces.
+2024-06-10T11:50:57.111+02:00  INFO 18680 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-10T11:50:57.120+02:00  INFO 18680 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-10T11:50:57.120+02:00  INFO 18680 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10T11:50:57.170+02:00  INFO 18680 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-10T11:50:57.170+02:00  INFO 18680 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1083 ms
+2024-06-10T11:50:57.183+02:00 DEBUG 18680 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648
+2024-06-10T11:50:57.184+02:00 DEBUG 18680 --- [backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-10T11:50:57.504+02:00  INFO 18680 --- [backend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/spring (MySQL 5.5)
+2024-06-10T11:50:57.537+02:00  INFO 18680 --- [backend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.020s)
+2024-06-10T11:50:57.545+02:00  INFO 18680 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `spring`: 5
+2024-06-10T11:50:57.546+02:00  INFO 18680 --- [backend] [main] o.f.core.internal.command.DbMigrate      : Schema `spring` is up to date. No migration necessary.
+2024-06-10T11:50:57.605+02:00  INFO 18680 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10T11:50:57.646+02:00  INFO 18680 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10T11:50:57.669+02:00  INFO 18680 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-10T11:50:57.895+02:00  INFO 18680 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10T11:50:57.914+02:00  INFO 18680 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-10T11:50:57.923+02:00  INFO 18680 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@323eecf8
+2024-06-10T11:50:57.925+02:00  INFO 18680 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-10T11:50:57.943+02:00  WARN 18680 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-10T11:50:57.946+02:00  WARN 18680 --- [backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10T11:50:58.669+02:00  INFO 18680 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10T11:50:58.672+02:00  INFO 18680 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T11:50:58.832+02:00  INFO 18680 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-10T11:50:59.222+02:00  WARN 18680 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10T11:50:59.273+02:00 DEBUG 18680 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2024-06-10T11:50:59.306+02:00 DEBUG 18680 --- [backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-10T11:50:59.331+02:00 DEBUG 18680 --- [backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-10T11:50:59.355+02:00  INFO 18680 --- [backend] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2024-06-10T11:50:59.423+02:00  INFO 18680 --- [backend] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e11d059, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62c4ad40, org.springframework.security.web.context.SecurityContextHolderFilter@5d7a274e, org.springframework.security.web.header.HeaderWriterFilter@581cd446, org.springframework.web.filter.CorsFilter@19bd1f98, org.springframework.security.web.authentication.logout.LogoutFilter@664c0019, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@15200332, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@40a2cae4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@9bc10bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5622e162, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f8589b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69cf9acb, org.springframework.security.web.access.ExceptionTranslationFilter@52c0c594, org.springframework.security.web.access.intercept.AuthorizationFilter@6aca85da]
+2024-06-10T11:50:59.821+02:00  INFO 18680 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-10T11:50:59.828+02:00  INFO 18680 --- [backend] [main] ts.myapp.MyappApplication                : Started MyappApplication in 4.183 seconds (process running for 4.61)
+2024-06-10T11:51:02.923+02:00  INFO 18680 --- [backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10T11:51:02.923+02:00  INFO 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-10T11:51:02.923+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-10T11:51:02.923+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-10T11:51:02.923+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-10T11:51:02.924+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@11caa21d
+2024-06-10T11:51:02.924+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3d118651
+2024-06-10T11:51:02.925+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-10T11:51:02.925+02:00  INFO 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-10T11:51:02.968+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:51:02.968+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:51:02.970+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:51:02.970+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:51:03.052+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:51:03.053+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@99b02f4]
+2024-06-10T11:51:03.060+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:51:03.063+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:51:03.064+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@4f553827]
+2024-06-10T11:51:03.102+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:51:20.875+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={masked}
+2024-06-10T11:51:20.876+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.Controller#home()
+2024-06-10T11:51:20.876+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2024-06-10T11:51:20.877+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<html><body>Odpowiedź serwera dla adresu: http://localhost:8080 </br><h1>@GetMapping("/")</h1></body (truncated)..."]
+2024-06-10T11:51:20.878+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:51:20.887+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:51:20.887+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:51:20.887+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:51:20.887+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:51:20.890+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:51:20.890+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:51:20.891+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@532d6a93]
+2024-06-10T11:51:20.891+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@63f18895]
+2024-06-10T11:51:20.894+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:51:20.911+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:52:37.315+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/12345678", parameters={}
+2024-06-10T11:52:37.315+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:52:37.315+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:52:37.315+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:52:37.317+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:52:37.317+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:52:37.318+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@151b8ec0]
+2024-06-10T11:52:37.318+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@68e5c079]
+2024-06-10T11:52:37.318+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:52:37.319+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:52:37.325+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:52:37.326+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:52:37.328+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:52:37.328+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@1d6ee01a]
+2024-06-10T11:52:37.339+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:52:43.174+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:52:43.174+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:52:43.176+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:52:43.176+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:52:43.178+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:52:43.178+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:52:43.178+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@69cc5c7c]
+2024-06-10T11:52:43.178+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@41ee9bb8]
+2024-06-10T11:52:43.179+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:52:43.187+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:52:43.188+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:52:43.189+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:52:43.190+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@29482ee8]
+2024-06-10T11:52:43.192+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:52:43.201+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:53:01.232+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:53:01.232+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/12345678", parameters={}
+2024-06-10T11:53:01.232+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:53:01.232+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:53:01.236+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:53:01.236+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:53:01.237+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@5003e574]
+2024-06-10T11:53:01.237+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@31153e53]
+2024-06-10T11:53:01.238+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:53:01.238+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:53:01.252+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:53:01.252+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:53:01.255+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:53:01.256+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@2278ecef]
+2024-06-10T11:53:01.270+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:53:03.185+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/me", parameters={}
+2024-06-10T11:53:03.185+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.controllers.UserController#me()
+2024-06-10T11:53:03.187+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/shares/mq8fh293", parameters={}
+2024-06-10T11:53:03.188+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.shares.ShareController#getConversationForSlug(String)
+2024-06-10T11:53:03.188+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:53:03.188+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@2dd73d7e]
+2024-06-10T11:53:03.189+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:53:03.191+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:53:03.191+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@118d4be0]
+2024-06-10T11:53:03.196+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/conversations", parameters={}
+2024-06-10T11:53:03.196+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ts.myapp.models.conversations.ConversationController#getConversations()
+2024-06-10T11:53:03.198+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-06-10T11:53:03.199+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ts.myapp.services.ApiResponse@1c375082]
+2024-06-10T11:53:03.204+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-10T11:53:03.211+02:00 DEBUG 18680 --- [backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

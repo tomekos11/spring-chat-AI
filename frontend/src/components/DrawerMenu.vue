@@ -25,7 +25,7 @@
         :key="index"
         clickable
         class="drawer-option"
-        @click="useUserStore().loadConversation(conversation.id)"
+        @click="useUserStore().loadConversation(conversation.id); $router.push('/')"
       >
         <share-dialog v-if="useActionsStore().share.isShareDialogOpened" />
         <q-item-section avatar>

@@ -59,6 +59,7 @@ public class SecurityConfig {
             )
             .authorizeHttpRequests((authz) -> authz
                 .requestMatchers(HttpMethod.OPTIONS).permitAll()
+                    .requestMatchers("/api/shares/**").permitAll()
                 .requestMatchers("/logout-success").permitAll()
                 .requestMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated()
