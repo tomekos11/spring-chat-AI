@@ -35,7 +35,7 @@ public class Conversation {
     @JoinColumn(name = "user_id")
     private User user;
 
-//    hidden-relations
+    //    hidden-relations
     @OneToMany(mappedBy = "conversation", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Message> messages;
 

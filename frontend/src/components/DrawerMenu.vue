@@ -27,7 +27,7 @@
         class="drawer-option"
         @click="useUserStore().loadConversation(conversation.id)"
       >
-        <share-dialog />
+        <share-dialog v-if="useActionsStore().share.isShareDialogOpened" />
         <q-item-section avatar>
           <q-avatar
             rounded
@@ -121,7 +121,7 @@
                   v-close-popup
                   dense
                   clickable
-                  @click.stop="useActionsStore().isShareDialogOpened = true"
+                  @click.stop="useActionsStore().setShareDetails(true, conversation.id, conversation.name ?? '')"
                 >
                   <q-item-section avatar>
                     <q-avatar

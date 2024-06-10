@@ -3,6 +3,7 @@ import { Notify } from 'quasar';
 import { api } from 'src/boot/axios';
 import { ChatCompletion } from 'src/types/messageType';
 import { getTimeNow } from 'src/utils/timeHelper';
+import { useActionsStore } from './actionsStore';
 
 interface Message {
   content: string,
@@ -123,7 +124,8 @@ export const useUserStore = defineStore('user', {
           });
       }
     },
-    shareConversation (conversationId: number, maintainAnonymity: boolean, expireDate: number[], usernames: string[]) {
+    shareConversation (conversationId: number, maintainAnonymity: boolean, expireDate: number[] | null, usernames: string[]) {
+      console.log('??');
       const foundIndex = this.allConversations.findIndex(el => el.id === conversationId);
       if (foundIndex !== -1) {
         api.post('/api/share', {
@@ -133,8 +135,8 @@ export const useUserStore = defineStore('user', {
           expireDate,
           usernames
         })
-          .then(() => {
-            console.log('shared');
+          .then((res) => {
+            useActionsStore().share.result = res.data.data;
             Notify.create({
               message: 'Poprawnie udostępniono konwersacje'
             });

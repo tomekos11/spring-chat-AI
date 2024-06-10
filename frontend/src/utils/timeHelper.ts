@@ -17,3 +17,9 @@ export const getTimeNow = () : number[] => {
 
   return [year, month, day, hours, minutes, seconds];
 };
+
+export const convertToSend = (stringDate: string) : number[] | null => {
+  if (!stringDate) return null;
+  const parts = stringDate.split('-');
+  return [Number(parts[0]), Number(parts[1]), Number(parts[2]), 0, 0, 0];
+};

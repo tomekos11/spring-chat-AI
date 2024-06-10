@@ -50,6 +50,13 @@ public class ShareController {
 
         Share share = new Share(slug, request.getMaintainAnonymity(), conversation, request.getDate(), request.getExpireDate());
 
+        if(request.getUsernames().size() > 0) {
+            for (String username : request.getUsernames()) {
+                User userToShare = userRepository.findUserByUsername(username);
+                SharesUsersPivot newUserInPivot = new SharesUsersPivot(userToShare, share, request.getDate(), request.getExpireDate());
+                share.addUser(newUserInPivot);
+            }
+        }
         
         shareRepository.save(share);
         return new ApiResponse<>(true, share, "Poprawnie udostępniono", null);

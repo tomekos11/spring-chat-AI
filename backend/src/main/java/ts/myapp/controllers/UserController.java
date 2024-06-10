@@ -16,8 +16,10 @@ import ts.myapp.models.users.requests.RegisterRequest;
 import ts.myapp.services.ApiResponse;
 import ts.myapp.validation.Validation;
 
+import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.stream.Collectors;
 
 @RestController
 public class UserController {
@@ -77,5 +79,15 @@ public class UserController {
 
 
         return new ApiResponse<>(true, "Wylogowano pomyślnie", "Użytkownik został wylogowany.", null);
+    }
+
+    @GetMapping("/api/usernames")
+    public ApiResponse<List<String>> usernames() {
+
+        List<String> usernames = userRepository.findAll().stream()
+                .map(User::getUsername)
+                .collect(Collectors.toList());
+
+        return new ApiResponse<>(true, usernames, "Zwrócono nazwy użytkowników", null);
     }
 }
